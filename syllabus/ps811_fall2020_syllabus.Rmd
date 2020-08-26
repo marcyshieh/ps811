@@ -119,25 +119,23 @@ Academic integrity is important to the University of Wisconsin--Madison. As such
 
 ## Diversity & Inclusion
 
-Diversity is a source of strength, creativity, and innovation for UW–Madison. We value the contributions of each person and respect the profound ways their identity, culture, background, experience, status, abilities, and opinion enrich the university community. We commit ourselves to the pursuit of excellence in teaching, research, outreach, and diversity as inextricably linked goals. The University of Wisconsin–Madison fulfills its public mission by creating a welcoming and inclusive community for people from every background — people who as students, faculty, and staff serve Wisconsin and the world. Visit [diversity.wisc.edu](https://diversity.wisc.edu/) for more information.
+From [diversity.wisc.edu](https://diversity.wisc.edu/): *Diversity is a source of strength, creativity, and innovation for UW–Madison. We value the contributions of each person and respect the profound ways their identity, culture, background, experience, status, abilities, and opinion enrich the university community. We commit ourselves to the pursuit of excellence in teaching, research, outreach, and diversity as inextricably linked goals. The University of Wisconsin–Madison fulfills its public mission by creating a welcoming and inclusive community for people from every background — people who as students, faculty, and staff serve Wisconsin and the world.*
 
 ## Accommodations
 
-The University of Wisconsin-Madison supports the right of all enrolled students to a full and equal educational opportunity.
+From [https://mcburney.wisc.edu/instructor/](https://mcburney.wisc.edu/instructor/): *The University of Wisconsin-Madison supports the right of all enrolled students to a full and equal educational opportunity. The Americans with Disabilities Act (ADA), Wisconsin State Statute (36.12), and UW-Madison policy (Faculty Document 1071) require that students with disabilities be reasonably accommodated in instruction and campus life. Reasonable accommodations for students with disabilities is a shared faculty and student responsibility. Students are expected to inform faculty [me] of their need for instructional accommodations by the end of the third week of the semester, or as soon as possible after a disability has been incurred or recognized. I will work either directly with the student you or in coordination with the McBurney Center to identify and provide reasonable instructional accommodations. Disability information, including instructional accommodations as part of a student’s educational record, is confidential and protected under FERPA.*
 
 If you observe any religious holidays, please let me know and we can discuss accommodations.
-
-The Americans with Disabilities Act (ADA), Wisconsin State Statute (36.12), and UW-Madison policy (Faculty Document 1071) require that students with disabilities be reasonably accommodated in instruction and campus life. Reasonable accommodations for students with disabilities is a shared faculty and student responsibility. Students are expected to inform faculty [me] of their need for instructional accommodations by the end of the third week of the semester, or as soon as possible after a disability has been incurred or recognized. I will work either directly with the student you or in coordination with the McBurney Center to identify and provide reasonable instructional accommodations. Disability information, including instructional accommodations as part of a student’s educational record, is confidential and protected under FERPA. Visit [https://mcburney.wisc.edu/instructor/](https://mcburney.wisc.edu/instructor/) for more information.
 
 Sudden life circumstances can certainly impact class performance. There are various resources on campus to help you navigate difficult times, such as the [Dean of Students Office](https://doso.students.wisc.edu/) and the [Division of Student Life](https://students.wisc.edu/).
 
 Please let me know as soon as possible if you require any accommodations at all, including anything that I did not mention. I want to ensure that this course contributes to your knowledge base rather than be a hindrance to your success.
 
-# Helpful Resources
+# Resources
 
 At some point, you might get stuck, as we all do. But have no fear! Not only will this class allow you to make mistakes, you will have me and your fellow colleagues as resources. And, since computing tools are so ubiquitious in academic and professional circles, it is very likely that someone also has the same question as you do and asked it on an Internet forum. With any luck, someone may have even answered the question!
 
-1. **Class Attendance** You should attend both first and second hours of class. The first hour introduces you to concept. The second hour allows you to ask questions about what you just learned, making it the best way to ask questions and learn.
+1. **Class Attendance** You should attend both hours of class. The first hour introduces you to concept, and the second hour allows you to ask questions about what you just learned. This keeps your concepts fresh and allows you to resolve any outstanding items of confusion.
 
 2. **Class Materials** I strongly recommend that you reference the class materials first. Rarely would I include a question in an assignment that you will be unable to solve by applying concepts that we went over in lecture. The answer keys will reference the slide where the concept is discussed in case you want to go back to the exact slide and review the concept.
 
