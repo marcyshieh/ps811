@@ -1,0 +1,609 @@
+\documentclass[11pt,]{article}
+\usepackage[margin=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
+\usepackage{longtable,booktabs}
+
+\usepackage{parskip}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+
+\titleformat*{\subsubsection}{\normalsize\itshape}
+
+\usepackage{titling}
+\setlength{\droptitle}{-.25cm}
+
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.0pt} 
+\lhead{}
+\chead{}
+\rhead{\footnotesize DRAFT - PS 811: Introduction to Statistical Computing -- Fall 2020}
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\fancypagestyle{firststyle}
+{
+\renewcommand{\headrulewidth}{0pt}%
+   \fancyhf{}
+   \fancyfoot[C]{\small \thepage/\pageref*{LastPage}}
+}
+
+%\def\labelitemi{--}
+%\usepackage{enumitem}
+%\setitemize[0]{leftmargin=25pt}
+%\setenumerate[0]{leftmargin=25pt}
+
+
+
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+}
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={ ()},
+             pdfkeywords = {},  
+            pdftitle={DRAFT - PS 811: Introduction to Statistical Computing},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+
+\setcounter{secnumdepth}{0}
+
+
+
+
+
+\usepackage{setspace}
+
+\title{DRAFT - PS 811: Introduction to Statistical Computing}
+\author{Marcy Shieh}
+\date{Fall 2020}
+
+
+\begin{document}  
+
+		\maketitle
+		
+	
+		\thispagestyle{firststyle}
+
+%	\thispagestyle{empty}
+
+
+	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
+
+
+E-mail: \texttt{\href{mailto:mshieh2@wisc.edu}{\nolinkurl{mshieh2@wisc.edu}}} & Web: \href{http://marcyshieh.github.io}{\tt marcyshieh.github.io}\\
+Office Hours: TBD  &  Class Hours: TBD\\
+Office: polisci811-fall2020.slack.com  & Class Room: TBD\\
+	&  \\
+	\hline
+	\end{tabular*}
+	
+\vspace{2mm}
+	
+
+
+\hypertarget{course-description}{%
+\section{Course Description}\label{course-description}}
+
+Much of modern social science takes place on a computer. As you mature
+in the discipline, you will find yourself desperate for efficiency and
+organization. This class will guide both quantatiative and qualitative
+scholars on how to better organize data, conduct analyses, compile
+literature reviews, create bibliographies, and complete a paper using
+popular computational tools and reproducible workflows. While many
+research projects are inundated with decisions that require theoretical
+justification, this class will at least help you make your analytical
+work transparent to the casual interloper.
+
+Political Science 811 is an introductory class of computing resources
+for political and social sciences. While not all political scientists
+use these tools (yet), most of the top journals in the discipline (e.g.,
+\emph{Journal of Politics, American Political Science Review, American
+Journal of Political Science}, and other journals that you may want to
+publish in) now require authors to submit replication files. Instead of
+having to retrace all your steps, these tools will allow you to organize
+as you go along and keep you honest as a scholar. In addition, I can
+attest that these skills transfer to technical and research-oriented
+jobs outside of academia. Even if your job description is not strictly
+technical in nature, you may end up having to interact with software
+developers and data analysts who operate within these computing
+frameworks.
+
+The goal of this course is to familiarize you with popular computing
+tools and where the discipline is headed so you can implement them in
+your own work. Other method courses focus on the foundational aspects of
+quantitative and qualitative research, which are important and great,
+but they leave a gap between ``doing the research'' and ``writing the
+paper.'' This class is meant to fill in that gap, which can often be
+complicated, confusing, and ambiguous. The hope is that this class will
+introduce you to tools that will ameliorate that daunting chasm, or at
+least make it more managaeable.\footnote{Special thanks to my PS 811
+  predecessors, \href{https://mikedecr.github.io/}{Mike DeCrescenzo} and
+  \href{https://judgelord.github.io}{Devin Judge-Lord}, for sharing
+  their materials with me.}
+
+\hypertarget{learning-outcomes}{%
+\section{Learning Outcomes}\label{learning-outcomes}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Prepare, model, and visualize data using the statistical programming
+  language \textbf{R}.
+\item
+  Write a research paper using \textbf{R Markdown}.
+\item
+  Manage your research projects using \textbf{Git}.
+\end{enumerate}
+
+\hypertarget{course-credit-information}{%
+\section{Course Credit Information}\label{course-credit-information}}
+
+This class is a 1-credit pass/fail course. This means that the class
+meets for one (1) hour each week over the fall semester and carries the
+expectation that students will work on course materials for about two
+(2) hours out of the classroom for every class period.
+
+Our course will meet for two (2) hours every week. Students
+\emph{should} attend the first hour synchronously (TBD) or
+asynchronously to gain all the necessary materials for the course. This
+hour will include lectures, code demos, and some applied exercises.
+While there may be some code snippets on the lecture slides, I will
+upload the full code scripts to Canvas so you can reference them later.
+
+Student then have the option to attend the second hour, where I will go
+over some questions on the problem set and answer any burning questions
+you may have about the course materials. In essence, you may interpret
+the second hour as additional office hours.
+
+\hypertarget{required-software}{%
+\section{Required Software}\label{required-software}}
+
+You will need to download the following software tools on to your
+computer. Fortunately, they are all free.
+
+\begin{itemize}
+\item
+  \textbf{R}, a free software environment to conduct statistical
+  analyses and create data visualizations. For those uninitiated to the
+  world of statistical programming, R is basically a super powerful
+  version of Microsoft Excel, but way more efficient. Download R at
+  \url{https://www.r-project.org/}.
+\item
+  \textbf{R Studio}, a user-friendly environment for programming in R.
+  One way to think about this is that R is the engine, and R Studio is
+  the car. You can use the engine without the car, but you cannot drive
+  the car without the engine. Or something like that. Downloda RStudio
+  Desktop (the free open source version) at
+  \url{https://rstudio.com/products/rstudio/download/}.
+\item
+  \textbf{LaTeX}, a software system for preparing documents. I don't
+  envision us using LaTeX in its natural state, but you will need to
+  download the software in order to compile R Markdown documents.
+  Download LaTeX at \url{https://www.latex-project.org/get/}.
+\item
+  \textbf{Git}, a version control system. You know about track changes
+  in Microsoft Word? Git is track changes, but for all your files. It
+  tells you who made changes to the file, what changes they made, and
+  when they made them. Thus, it is ideal for collaboration and working
+  solo. Instead of naming your files \texttt{document\_2020-08-25.Rmd}
+  then over-writing it as \texttt{document\_2020-08-26.Rmd} when you
+  make some changes, Git does all of this for you without you possibly
+  confusing dates, saving the file without saving \emph{as} the file,
+  and all the other problems you may run into when you attempt to
+  version control manually. You may already have Git in your computer.
+  Check whether you have Git on your computer at
+  \url{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}.
+  \textbf{Do not install from source.}
+\end{itemize}
+
+I am not dogmatic about how you choose to code in R, as long as you
+\emph{know} how to code and \emph{understand} what you are doing. Half
+the battle with learning R is fostering confidence and curiosity. Only
+then, would you feel comfortable running different commands and Googling
+your R questions.
+
+This class is an introduction on how to use R, and aims to give you the
+ability to self-learn R and be literate in all kinds of R code. Thus, I
+will try to cover both base R and the Tidyverse language, which I will
+talk about more during the course, but it is ultimately up to you to
+determine what works for you.
+
+\hypertarget{deliverables-grading}{%
+\section{Deliverables \& Grading}\label{deliverables-grading}}
+
+The assignments in this class are meant to give you extra practice on
+the materials we learn in class and contribute to your final project.
+Late assignments will not be accepted.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Weekly assignments: 50\%} These assignments will help you
+  apply the skills learned in class and will focus on data tasks in R,
+  then integrating them into the Git workflow.
+\item
+  \textbf{Midterm project: 20\%} You and a partner will work on a
+  project together where you demonstrate your ability to use Git for
+  collaboration purposes. You will present your project live or submit a
+  recording. Your colleagues can provide feedback on Slack.
+\item
+  \textbf{Final project: 30\%} You will be responsible for submitting a
+  project repository that includes the R Markdown paper, the R code for
+  the analysis, graphics, and bibliography, etc. and is
+  version-controlled with Git and pushed to Github. In essence, I should
+  be able to reproduce your entire project with the files in your
+  project respository. You will present your project live or submit a
+  recording. Your colleagues can provide feedback on Slack.
+\end{enumerate}
+
+\hypertarget{class-logistics}{%
+\section{Class Logistics}\label{class-logistics}}
+
+\hypertarget{attendance}{%
+\subsection{Attendance}\label{attendance}}
+
+Attendance is not required but strongly recommended. If you cannot
+attend class synchronously, you should watch the video recordings of the
+lectures in your own time. The advantage of attending class
+synchronously is that you will be \emph{encouraged} to ask questions as
+you learn the concepts. However, if it is not possible at all for you to
+attend lecture synchronously (e.g., life circumstances, time zone
+differences), please let me know and we can discuss accommodation
+options.
+
+\hypertarget{academic-integrity}{%
+\subsection{Academic Integrity}\label{academic-integrity}}
+
+Academic integrity is important to the University of Wisconsin--Madison.
+As such, please do not plagiarize, use unauthorized materials or
+fabricated data, tamper with another student's work, or assist any
+students in these acts. If you collaborated with your colleagues (i.e.,
+worked on the assignment together), do not copy and paste their code or
+pass them as your own. To keep yourself honest, you may also link to the
+website(s) or forum post(s) that helped you find the answer. Type out
+the code and credit them for their help. Explain the code in ways that
+you understand and can reference in the future. If you fail to follow
+best practices, you can face disciplinary action, which includes failing
+the assignment, failing the course, or facing other disciplinary action
+by the department or the university. I will report substantial or
+repeated cases of misconduct to the Office of Student Conduct \&
+Community Standards for further review. Refer to
+\url{https://conduct.students.wisc.edu/misconduct/academic-integrity/}
+for more information.
+
+\hypertarget{diversity-inclusion}{%
+\subsection{Diversity \& Inclusion}\label{diversity-inclusion}}
+
+Diversity is a source of strength, creativity, and innovation for
+UW--Madison. We value the contributions of each person and respect the
+profound ways their identity, culture, background, experience, status,
+abilities, and opinion enrich the university community. We commit
+ourselves to the pursuit of excellence in teaching, research, outreach,
+and diversity as inextricably linked goals. The University of
+Wisconsin--Madison fulfills its public mission by creating a welcoming
+and inclusive community for people from every background --- people who
+as students, faculty, and staff serve Wisconsin and the world. Visit
+\href{https://diversity.wisc.edu/}{diversity.wisc.edu} for more
+information.
+
+\hypertarget{accommodations}{%
+\subsection{Accommodations}\label{accommodations}}
+
+The University of Wisconsin-Madison supports the right of all enrolled
+students to a full and equal educational opportunity.
+
+If you observe any religious holidays, please let me know and we can
+discuss accommodations.
+
+The Americans with Disabilities Act (ADA), Wisconsin State Statute
+(36.12), and UW-Madison policy (Faculty Document 1071) require that
+students with disabilities be reasonably accommodated in instruction and
+campus life. Reasonable accommodations for students with disabilities is
+a shared faculty and student responsibility. Students are expected to
+inform faculty {[}me{]} of their need for instructional accommodations
+by the end of the third week of the semester, or as soon as possible
+after a disability has been incurred or recognized. I will work either
+directly with the student you or in coordination with the McBurney
+Center to identify and provide reasonable instructional accommodations.
+Disability information, including instructional accommodations as part
+of a student's educational record, is confidential and protected under
+FERPA. Visit \url{https://mcburney.wisc.edu/instructor/} for more
+information.
+
+Sudden life circumstances can certainly impact class performance. There
+are various resources on campus to help you navigate difficult times,
+such as the Dean of Students Office and the Division of Student Life.
+
+Please let me know as soon as possible if you require any accommodations
+at all, including anything that I did not mention. I want to ensure that
+this course contributes to your knowledge base rather than be a
+hindrance to your success.
+
+\hypertarget{helpful-resources}{%
+\section{Helpful Resources}\label{helpful-resources}}
+
+At some point, you might get stuck, as we all do. But have no fear! Not
+only will this class allow you to make mistakes, you will have me and
+your fellow colleagues as resources. And, since computing tools are so
+ubiquitious in academic and professional circles, it is very likely that
+someone also has the same question as you do and asked it on an Internet
+forum. With any luck, someone may have even answered the question!
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Class Attendance} You should attend both first and second
+  hours of class. The first hour introduces you to concept. The second
+  hour allows you to ask questions about what you just learned, making
+  it the best way to ask questions and learn.
+\item
+  \textbf{Class Materials} I strongly recommend that you reference the
+  class materials first. Rarely would I include a question in an
+  assignment that you will be unable to solve by applying concepts that
+  we went over in lecture. The answer keys will reference the slide
+  where the concept is discussed in case you want to go back to the
+  exact slide and review the concept.
+\item
+  \textbf{Collaboration} As we continue to navigate our virtual higher
+  education landscape, we are confronted with hurdles when it comes to
+  ease of collaboration. Even in normal times, however, we often have to
+  work with collaborators who we cannot meet in-person. As such, I
+  highly encourage you to collaborate with each other on weekly
+  assignments. For effective collaboration, I recommend doing the
+  exercises on your own, identifying the questions you need help on,
+  then showing up to a collaborative space with what you know and what
+  you don't know. Collaboration \emph{does} mean seeking help among each
+  other, but it \emph{does not} mean copying and pasting text and code
+  written by someone else and passing it off as your own. If you use
+  your colleague's code, as one often do when they learn coding, type
+  out the code yourself and make sure to \emph{credit} your colleague
+  for their work. If you have some experience with coding or feel
+  comfortable with the material, please consider assisting your
+  colleagues. Sharing knowledge is as rewarding as gaining knowledge,
+  but hoarding knowledge is not rewarding at all.
+\item
+  \textbf{Slack} My hope to facilitate collaboration is why I've set up
+  Slack for this course. Slack is a communication platform that came to
+  fame among software developers, but is now used by project teams of
+  all stripes. Posting on Slack is not a requirement, but it is
+  certainly a way for you to reach out to help from me and/or your
+  colleagues and get an answer as soon as possible. If you believe your
+  question will be beneficial to not only you, but to your colleagues as
+  well, you should \emph{definitely} post it on the Slack. As a graduate
+  student, I'm in front of my computer quite a bit, but I will give you
+  all a chance to help each other with questions from the assignment
+  before I jump in. Some examples of Slack-friendly items include:
+  questions about the assignments, resources that you have found useful
+  on and off the web (e.g., books, websites, blogs, Twitter posts,
+  videos), mnemonics, or cross-references with your other courses.
+\item
+  \textbf{Office Hours} While I plan to be available on Slack on most
+  weekdays (and maybe even weekends), I will also hold regular office
+  hours. To schedule office hours with me, simply email me during my
+  regular office hours and I will jump on a video call with you.
+\item
+  \textbf{Email} If your question is of a personal nature and is
+  specific to you and only you, please email me. Expect me to respond
+  within 24 hours and if I do not, please feel free to email me again.
+  You will \emph{not} be annoying me.
+\item
+  \textbf{Google (or your preferred search engine)} There are
+  \emph{tons} of resources online about R and Git. You will start to
+  notice that your search results will often yield either posts from
+  Stack Overflow and Stack Exchange. Use them. Much of Goggling in R to
+  achieve required results is learning how to refer to certain commands.
+  You learn as you go. Sometimes the Stack Overflow and Stack Exchange
+  communities can get a bit abrasive (in my experience). I recommend the
+  \href{https://community.rstudio.com/}{R Studio Community} if you do
+  actually want to ask a question because you can't find an answer to it
+  anywhere. I love Googling and I have spent many hours going down on
+  various R-related Googling rabbit holes late into the night. I don't
+  recommend this. While it has helped me learn \emph{how} to Google,
+  there comes a point (it's the 5-hour mark for me, but it might be the
+  2-hour mark for you) where you should ask for help.
+\end{enumerate}
+
+\hypertarget{class-schedule}{%
+\section{Class Schedule}\label{class-schedule}}
+
+The schedule includes topics, resources, and due dates for the midterm
+and final projects. I will try to keep resources at a minimum. You will
+likely be overwhelmed by the R you will learn in PS 812 and the R you
+will learn in here, so I want to minimize the confusion and maximize the
+practicality.
+
+I will try to provide some instructions for setting up everything you
+need prior to each lecture, but feel free to ask questions in class, on
+the Slack, or via email. I would rather give you time to set up
+everything in your own time and ask for help when convenient than feel
+left behind in class and freak out, which is often the story of my life.
+
+This syllabus might evolve over time and accommodate any feedback I
+receive over the course of the semester. Think of this syllabus as a
+road map. There are certain destinations we'd like to hit, but it's
+possible for us to take a different route to get there.
+
+\hypertarget{week-01-0815---0819-set-up-all-the-tools-you-will-need-for-the-class-including-r-r-studio-r-markdown-knit-as-pdf-and-html-git-and-github.}{%
+\subsection{Week 01, 08/15 - 08/19: Set up all the tools you will need
+for the class, including R, R Studio, R Markdown (knit as PDF and HTML),
+Git, and
+Github.}\label{week-01-0815---0819-set-up-all-the-tools-you-will-need-for-the-class-including-r-r-studio-r-markdown-knit-as-pdf-and-html-git-and-github.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://happygitwithr.com/rstudio-git-github.html}{Connect
+  RStudio to Git and Github}
+\item
+  \href{https://bookdown.org/yihui/rmarkdown/markdown-syntax.html}{Markdown
+  Syntax}
+\end{itemize}
+
+\hypertarget{week-02-0822---0826-do-you-what-you-already-do-but-with-cool-computing-tools-create-a-project-create-a-document-write-some-math-in-your-document-and-organize-a-bibliography.}{%
+\subsection{Week 02, 08/22 - 08/26: Do you what you already do but with
+cool computing tools: create a project, create a document, write some
+math in your document, and organize a
+bibliography.}\label{week-02-0822---0826-do-you-what-you-already-do-but-with-cool-computing-tools-create-a-project-create-a-document-write-some-math-in-your-document-and-organize-a-bibliography.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/}{Project
+  Management with R Studio}
+\item
+  \href{https://rpruim.github.io/s341/S19/from-class/MathinRmd.html\#:~:text=Math\%20inside\%20RMarkdown,10n\%3D1n2.}{Mathematics
+  in R Markdown}
+\item
+  \href{https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html}{Bibliographies
+  and citations}
+\end{itemize}
+
+\hypertarget{week-03-0829---0902-base-r-vs.-tidyverse-and-how-to-be-comfortable-with-both.}{%
+\subsection{Week 03, 08/29 - 09/02: Base R vs.~Tidyverse, and how to be
+comfortable with
+both.}\label{week-03-0829---0902-base-r-vs.-tidyverse-and-how-to-be-comfortable-with-both.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html}{Syntax
+  equivalents: base R vs Tidyverse}
+\end{itemize}
+
+\hypertarget{week-04-0905---0909-some-useful-functions-for-your-own-work-and-ps-812.}{%
+\subsection{Week 04, 09/05 - 09/09: Some useful functions for your own
+work and PS
+812.}\label{week-04-0905---0909-some-useful-functions-for-your-own-work-and-ps-812.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://r4ds.had.co.nz/iteration.html}{Iterations} and
+  \href{https://r4ds.had.co.nz/many-models.html}{Many Models}
+\item
+  \href{https://www.hvitfeldt.me/blog/purrr-tips-and-tricks/}{Purrr -
+  tips and tricks}
+\end{itemize}
+
+\hypertarget{week-05-0912---0916-manipulate-data.}{%
+\subsection{Week 05, 09/12 - 09/16: Manipulate
+data.}\label{week-05-0912---0916-manipulate-data.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://mikedecr.github.io/courses/811/811-03-data/}{Data
+  Manipulation}
+\end{itemize}
+
+\hypertarget{week-06-0919---0923-create-graphics.}{%
+\subsection{Week 06, 09/19 - 09/23: Create
+graphics.}\label{week-06-0919---0923-create-graphics.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://mikedecr.github.io/courses/811/811-04-graphics/}{Graphics}
+\end{itemize}
+
+\hypertarget{week-07-0926---0930-regression-and-model-outputs.}{%
+\subsection{Week 07, 09/26 - 09/30: Regression and model
+outputs.}\label{week-07-0926---0930-regression-and-model-outputs.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://mikedecr.github.io/courses/811/811-05-analysis/}{Analysis}
+\item
+  \href{https://raw.githack.com/uo-ec607/lectures/master/08-regression/08-regression.html}{Regression
+  Analysis in R}
+\end{itemize}
+
+\hypertarget{week-08-1003---1007-midterm-project-presentations.}{%
+\subsection{Week 08, 10/03 - 10/07: Midterm project
+presentations.}\label{week-08-1003---1007-midterm-project-presentations.}}
+
+\hypertarget{week-09-1010---1014-dealing-with-data.}{%
+\subsection{Week 09, 10/10 - 10/14: Dealing with
+data.}\label{week-09-1010---1014-dealing-with-data.}}
+
+\hypertarget{week-10-1017---1021-popular-analysis-tools-text-analysis-mturkr.}{%
+\subsection{Week 10, 10/17 - 10/21: Popular analysis tools: text
+analysis,
+mturkr.}\label{week-10-1017---1021-popular-analysis-tools-text-analysis-mturkr.}}
+
+\hypertarget{week-11-1024---1028-some-more-git.}{%
+\subsection{Week 11, 10/24 - 10/28: Some more
+git.}\label{week-11-1024---1028-some-more-git.}}
+
+\hypertarget{week-12-1031---1104-create-your-own-github-website.}{%
+\subsection{Week 12, 10/31 - 11/04: Create your own Github
+website.}\label{week-12-1031---1104-create-your-own-github-website.}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://marcyshieh.github.io/posts/github-website-tutorial/}{How
+  to Host a Website on Github}
+\end{itemize}
+
+\hypertarget{week-13-1107---1111-final-project-presentations.}{%
+\subsection{Week 13, 11/07 - 11/11: Final project
+presentations.}\label{week-13-1107---1111-final-project-presentations.}}
+
+
+
+
+\end{document}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
