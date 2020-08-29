@@ -162,35 +162,36 @@ This syllabus might evolve over time and accommodate any feedback I receive over
 * [Connect RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html)
 * [Markdown Syntax](https://bookdown.org/yihui/rmarkdown/markdown-syntax.html)
 
-## `r advdate(mon, 2)`: Do you what you already do but with cool computing tools: create a project, create a document, write some math in your document, and organize a bibliography.
+## `r advdate(mon, 2)`: Do you what you already do but with cool computing tools - part i: create a project and start writing a document in APA style.
 
 * [Project Management with R Studio](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/)
 * [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html#:~:text=Math%20inside%20RMarkdown,10n%3D1n2.)
+
+##  `r advdate(mon, 3)`: Do you what you already do but with cool computing tools - part ii: create a bibliography
+
 * [Bibliographies and citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
 
-##  `r advdate(mon, 3)`: Base R vs. Tidyverse, and how to be comfortable with both.
+##  `r advdate(mon, 4)`: Base R vs. Tidyverse, and how to be comfortable with both.
 
 * [Syntax equivalents: base R vs Tidyverse](https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html)
 
-##  `r advdate(mon, 4)`: Some useful functions for your own work and PS 812.
+##  `r advdate(mon, 5)`: Some useful functions for your own work and PS 812.
 
 * [Iterations](https://r4ds.had.co.nz/iteration.html) and [Many Models](https://r4ds.had.co.nz/many-models.html)
 * [Purrr - tips and tricks](https://www.hvitfeldt.me/blog/purrr-tips-and-tricks/)
 
-##  `r advdate(mon, 5)`: Manipulate data.
+##  `r advdate(mon, 6)`: Manipulate data.
 
 * [Data Manipulation](https://mikedecr.github.io/courses/811/811-03-data/)
 
-##  `r advdate(mon, 6)`: Create graphics.
+##  `r advdate(mon, 7)`: Create graphics.
 
 * [Graphics](https://mikedecr.github.io/courses/811/811-04-graphics/)
 
-##  `r advdate(mon, 7)`: Regression and model outputs.
+##  `r advdate(mon, 8)`: Regression and model outputs.
 
 * [Analysis](https://mikedecr.github.io/courses/811/811-05-analysis/)
 * [Regression Analysis in R](https://raw.githack.com/uo-ec607/lectures/master/08-regression/08-regression.html)
-
-##  `r advdate(mon, 8)`: Midterm project presentations.
 
 ##  `r advdate(mon, 9)`: Dealing with data.
 
