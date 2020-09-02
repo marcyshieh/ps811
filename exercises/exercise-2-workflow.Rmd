@@ -1,0 +1,32 @@
+---
+title: 'Exercise 2: Workflow'
+author: "Marcy Shieh"
+date: "9/17/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Create a new repository called `cv` on GitHub.
+
+2. Clone the `cv` repository on to your computer using RStudio.
+
+3. Install the `vitae` package. 
+
+4. Open a `vitae` package template in R Markdown. Use the Hyndman format.
+
+5. Knit the file as a PDF to get a sense of how the template looks like.
+
+6. Edit the .Rmd file with the information you put in the R Markdown file in your `misc` folder from Exercise 1.
+
+    For the publications section, you need to edit the `curie.bib` file and replace the articles in there with your publications, if you have any. If you do not yet have any publications, feel free to delete the section.
+    
+    To edit the `curie.bib` file, you need to delete all of Marie Curie's article entries. You will then need to find your article on Google Scholar, click on the quotation icon under your article, click the "BibTeX" link on the bottom of the pop-up, and copy and paste the information on to the `curie.bib` file.
+    
+7. Once you're done, knit the file again.
+
+8. Push all the files to the `cv` Git repository.
+
+9.  Email me (mshieh2@wisc.edu) the link to your `cv` repository when you are done.

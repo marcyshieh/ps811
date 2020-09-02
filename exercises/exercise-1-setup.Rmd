@@ -1,0 +1,44 @@
+---
+title: 'Exercise 1: Setup'
+author: "Marcy Shieh"
+date: "9/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Apply for a GitHub Pro account.
+
+2. Create a new repository called `misc` on GitHub.
+
+3. Clone the `misc` repository on to your computer using RStudio.
+
+4. Create a R Markdown document and save it in the `misc` folder on your computer.
+
+5. Revise the R Markdown document with information you would put on your CV. This may include:
+
+    * Name
+    * Department address
+    * Email address
+    * Website
+    * Other contact information
+    * Education
+    * Research experience
+    * Teaching experience
+    * Conference presentations
+    * Awards and fellowships
+    * Service/volunteer work
+    * Professional work experience
+    * Language and skills
+    * References
+    * Other
+  
+    We will transport this information on to a CV template in our exercise next week.
+    
+6. Knit the R Markdown document as both a PDF and HTML file.
+
+7. Push all the files to the `misc` Git repository.
+
+8. Email me (mshieh2@wisc.edu) the link to your `misc` repository when you are done.

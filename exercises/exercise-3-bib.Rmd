@@ -1,0 +1,31 @@
+---
+title: 'Exercise 3: Bibliography'
+author: "Marcy Shieh"
+date: "9/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Add all the readings you did in seminar this week to Zotero.
+
+2. Create a R Markdown file using the papaja template in your ps811-exercises repository. Save it as `exercise-3-bib.Rmd`.
+
+3. Customize the template to refer to this particular assignment.
+
+4. Cite each reading without parentheses and write a parragraph about each reading that includes information on:
+
+    * Main argument (what is the question? theory?)
+    * Data (what is the data source? from a data set? from a survey?)
+    * Methods (what did the author(s) use? text analysis? regression analysis? an experiment?)
+    * Conclusion (what did the author(s) find?)
+    
+    If you take good notes for your readings (as you should, for prelims prep), this exercise should be a breeze.
+    
+5. Each group of readings should go under a header with the seminar name.
+
+6. Knit to PDF.
+
+7. Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.

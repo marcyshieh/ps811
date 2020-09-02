@@ -1,0 +1,42 @@
+---
+title: 'Exercise 4: Git Branch'
+author: "Marcy Shieh"
+date: "9/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Create a Git branch and invite a collaborator
+
+1. Create a Git branch called `feedback` within your `ps-exercises` project.
+
+2. Create a "Comments" section on the `exercise-3-bib.Rmd` you created in Exercise 3.
+
+3. Add a collaborator to your repository. Go to your repository on GitHub. Go to Settings. Click on Manage access. Click on the green "Invite a collaborator" button. Invite your assigned partner.
+
+# Work on your collaborator's Git branch
+
+You may use command line or RStudio to complete these tasks. Whatever you feel more comfortable with.
+
+1. Once your partner confirms that they have invited you as a collaboorator, you should accept the invitation and go to their Github repository. 
+
+2. Clone their repository so you can work on their repository on your computer.
+
+3. Make sure you in their `feedback` branch.
+
+4. Review their `exercise-3-bib.Rmd` document and add some comments and questions.
+
+5. Knit to PDF.
+
+6. Commit, write a commit message, and push the file to the repository.
+
+7. Create a pull request.
+
+# Confirm your collaborator's request
+
+1. Confirm the pull request and merge.
+
+2. Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.
