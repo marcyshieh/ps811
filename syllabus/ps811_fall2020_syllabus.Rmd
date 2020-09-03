@@ -7,16 +7,16 @@ output:
     template: /Users/marcyshieh/Desktop/811/syllabus-example/svm-latex-syllabus.tex
 geometry: margin=1in
 
-title: "DRAFT - PS 811: Introduction to Statistical Computing"
+title: "PS 811: Introduction to Statistical Computing"
 author: Marcy Shieh
 date: "Fall 2020"
 
 email: "mshieh2@wisc.edu"
-web: "marcyshieh.github.io"
-officehours: "TBD"
-office: "polisci811-fall2020.slack.com"
-classroom: "TBD"
-classhours: "TBD"
+web: "marcyshieh.github.io/ps811/"
+officehours: "Mondays, 3:00 to 5:00 PM CST"
+office: "[polisci811-fall2020.slack.com](polisci811-fall2020.slack.com)"
+classroom: "Zoom (link on Canvas)"
+classhours: "Thursdays, 10:00 to 11:00 AM CST"
 
 fontfamily: mathpazo
 fontsize: 11pt
@@ -59,11 +59,11 @@ myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE,
 
 # Course Description
 
-Much of modern social science takes place on a computer. As you mature in the discipline, you will find yourself desperate for efficiency and organization. This class will guide both quantatiative and qualitative scholars on how to better organize data, conduct analyses, compile literature reviews, create bibliographies, and complete a paper using popular computational tools and reproducible workflows. While many research projects are inundated with decisions that require theoretical justification, this class will at least help you make your analytical work transparent to the casual interloper.
+Much of modern social science takes place on a computer. As you mature in the discipline, you will find yourself desperate for efficiency and organization. This class will guide both quantitative and qualitative scholars on how to better organize data, conduct analyses, compile literature reviews, create bibliographies, and complete a paper using popular computational tools and reproducible workflows. While many research projects are inundated with decisions that require extensive theoretical justification, this class will at least help you make your analytically work transparent to the casual interloper.
 
 Political Science 811 is an introductory class of computing resources for political and social sciences. While not all political scientists use these tools (yet), most of the top journals in the discipline (e.g., *Journal of Politics, American Political Science Review, American Journal of Political Science*, and other journals that you may want to publish in) now require authors to submit replication files. Instead of having to retrace all your steps, these tools will allow you to organize as you go along and keep you honest as a scholar. In addition, I can attest that these skills transfer to technical and research-oriented jobs outside of academia. Even if your job description is not strictly technical in nature, you may end up having to interact with software developers and data analysts who operate within these computing frameworks.
 
-The goal of this course is to familiarize you with popular computing tools and where the discipline is headed so you can implement them in your own work. Other method courses focus on the foundational aspects of quantitative and qualitative research, which are important and great, but they leave a gap between "doing the research" and "writing the paper." This class is meant to fill in that gap, which can often be complicated, confusing, and ambiguous. The hope is that this class will introduce you to tools that will ameliorate that daunting chasm, or at least make it more managaeable.^[Special thanks to my PS 811 predecessors, [Mike DeCrescenzo](https://mikedecr.github.io/) and [Devin Judge-Lord](https://judgelord.github.io), for sharing their materials with me.]
+The goal of this course is to familiarize you with popular computing tools and where the discipline is headed so you can implement them in your own work. Other method courses focus on the foundational aspects of quantitative and qualitative research, which are important and great, but they leave a gap between "doing the research" and "writing the paper." This class is meant to fill in that gap, which can often be complicated, confusing, and ambiguous. The hope is that this class will introduce you to tools that will ameliorate that daunting chasm, or at least make it more manageable.^[Special thanks to my PS 811 predecessors, [Mike DeCrescenzo](https://mikedecr.github.io/) and [Devin Judge-Lord](https://judgelord.github.io), for sharing their materials with me.]
 
 # Learning Outcomes
 
@@ -77,25 +77,27 @@ The goal of this course is to familiarize you with popular computing tools and w
 
 This class is a 1-credit pass/fail course. This means that the class meets for one (1) hour each week over the fall semester and carries the expectation that students will work on course materials for about two (2) hours out of the classroom for every class period.
 
-Our course will meet for two (2) hours every week. Students *should* attend the first hour synchronously (TBD) or asynchronously to gain all the necessary materials for the course. This hour will include lectures, code demos, and some applied exercises. While there may be some code snippets on the lecture slides, I will upload the full code scripts to Canvas so you can reference them later.
+Our course will meet for two (2) hours every week. Students *should* attend the first hour synchronously on Thursdays from 10:00 to 11:00 AM CST or asynchronously to gain all the necessary materials to complete the assignments for the course. This hour will include lectures, code demos, and applied exercises.
 
-Student then have the option to attend the second hour, where I will go over some questions on the problem set and answer any burning questions you may have about the course materials. In essence, you may interpret the second hour as additional office hours.
+Student then have the option to attend the second hour on Slack, where I will be available to go over questions on the problem set and answer any burning questions you may have about the course materials. In essence, you may interpret the second hour as additional office hours.
 
 # Required Software
 
 You will need to download the following software tools on to your computer. Fortunately, they are all free.
 
-* **R**, a free software environment to conduct statistical analyses and create data visualizations. For those uninitiated to the world of statistical programming, R is basically a super powerful version of Microsoft Excel, but way more efficient. Download R at [https://www.r-project.org/](https://www.r-project.org/).
+* **R**, a free software environment to conduct statistical analyses and create data visualizations. For those uninitiated to the world of statistical programming but has worked in an office before, R is basically a super powerful version of Microsoft Excel, but way more efficient. Download R at [https://www.r-project.org/](https://www.r-project.org/).
 
-* **R Studio**, a user-friendly environment for programming in R. One way to think about this is that R is the engine, and R Studio is the car. You can use the engine without the car, but you cannot drive the car without the engine. Or something like that. Downloda RStudio Desktop (the free open source version) at [https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/).
+* **R Studio**, a user-friendly environment for programming in R. One way to think about this is that R is the engine, and R Studio is the car. You can use the engine without the car, but you cannot drive the car without the engine. Or something like that. Download RStudio Desktop (the free open source version) at [https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/).
 
-* **LaTeX**, a software system for preparing documents. I don't envision us using LaTeX in its natural state, but you will need to download the software in order to compile R Markdown documents. Download LaTeX at [https://www.latex-project.org/get/](https://www.latex-project.org/get/).
+* **LaTeX**, a software system for preparing documents. I don't envision us using LaTeX in its purest form too often, but you will need to download the software in order to compile R Markdown documents. Download LaTeX at [https://www.latex-project.org/get/](https://www.latex-project.org/get/).
 
 * **Git**, a version control system. You know about track changes in Microsoft Word? Git is track changes, but for all your files. It tells you who made changes to the file, what changes they made, and when they made them. Thus, it is ideal for collaboration and working solo. Instead of naming your files `document_2020-08-25.Rmd` then over-writing it as `document_2020-08-26.Rmd` when you make some changes, Git does all of this for you without you possibly confusing dates, saving the file without saving *as* the file, and all the other problems you may run into when you attempt to version control manually. You may already have Git in your computer. Check whether you have Git on your computer at [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). **Do not install from source.**
 
-I am not dogmatic about how you choose to code in R, as long as you *know* how to code and *understand* what you are doing. Half the battle with learning R is fostering confidence and curiosity. Only then, would you feel comfortable running different commands and Googling your R questions.
+* **Zotero**, a bibliography management system. This tool can help you manage all your (potential) citations. Download Zotoro at [https://www.zotero.org/download/](https://www.zotero.org/download/).
 
-This class is an introduction on how to use R, and aims to give you the ability to self-learn R and be literate in all kinds of R code. Thus, I will try to cover both base R and the Tidyverse language, which I will talk about more during the course, but it is ultimately up to you to determine what works for you.
+I am not dogmatic about how you choose to code in R, as long as you *know* how to code and *understand* what you are doing. Half the battle with learning R is cultivating confidence and curiosity. Only then, would you feel comfortable running different commands and Googling your R questions.
+
+This class is an introduction on how to use R, and aims to give you the ability to self-learn R and be literate in R code. Thus, I will try to cover both base R and the Tidyverse language, but it is ultimately up to you to determine what works for you.
 
 # Deliverables & Grading
 
@@ -103,19 +105,21 @@ The assignments in this class are meant to give you extra practice on the materi
 
 1. **Weekly assignments: 50%** These assignments will help you apply the skills learned in class and will focus on data tasks in R, then integrating them into the Git workflow.
 
-2. **Midterm project: 20%** You and a partner will work on a project together where you demonstrate your ability to use Git for collaboration purposes. You will present your project live or submit a recording. Your colleagues can provide feedback on Slack.
+2. **Midterm project: 20%** You and a partner will submit a project where you demonstrate your ability to use Git for collaboration purposes.
 
-3. **Final project: 30%** You will be responsible for submitting a project repository that includes the R Markdown paper, the R code for the analysis, graphics, and bibliography, etc. and is version-controlled with Git and pushed to Github. In essence, I should be able to reproduce your entire project with the files in your project respository. You will present your project live or submit a recording. Your colleagues can provide feedback on Slack.
+3. **Final project: 30%** You will be responsible for submitting a project repository that includes the R Markdown paper, the R code for the analysis, graphics, and bibliography, etc. and is version-controlled with Git and pushed to GitHub. Ultimately, I should be able to reproduce your entire project with the files in your project repository. You will present your project live or submit a recording. Your colleagues will provide feedback on Slack.
 
 # Class Logistics
 
+Some bureaucratic details about the class.
+
 ## Attendance
 
-Attendance is not required but strongly recommended. If you cannot attend class synchronously, you should watch the video recordings of the lectures in your own time. The advantage of attending class synchronously is that you will be *encouraged* to ask questions as you learn the concepts. However, if it is not possible at all for you to attend lecture synchronously (e.g., life circumstances, time zone differences), please let me know and we can discuss accommodation options.
+Attendance is not required but strongly recommended. If you cannot attend class synchronously, you should watch the video recordings of the lectures in your own time. The advantage of attending class synchronously is that you will be *encouraged* to ask questions as you learn the concepts. However, if it is not possible at all for you to attend lecture synchronously (e.g., life circumstances, time zone differences), please let me know as soon as possible and we can discuss accommodation options.
 
 ## Academic Integrity
 
-Academic integrity is important to the University of Wisconsin--Madison. As such, please do not plagiarize, use unauthorized materials or fabricated data, tamper with another student's work, or assist any students in these acts. If you collaborated with your colleagues (i.e., worked on the assignment together), do not copy and paste their code or pass them as your own. To keep yourself honest, you may also link to the website(s) or forum post(s) that helped you find the answer. Type out the code and credit them for their help. Explain the code in ways that you understand and can reference in the future. If you fail to follow best practices, you can face disciplinary action, which includes failing the assignment, failing the course, or facing other disciplinary action by the department or the university. I will report substantial or repeated cases of misconduct to the Office of Student Conduct & Community Standards for further review. Refer to [https://conduct.students.wisc.edu/misconduct/academic-integrity/](https://conduct.students.wisc.edu/misconduct/academic-integrity/) for more information.
+Academic integrity is important to the University of Wisconsin--Madison. As such, please do not plagiarize, use unauthorized materials or fabricated data, tamper with another student's work, or assist any students in these acts. If you collaborated with your colleagues (i.e., worked on the assignment together), do not copy and paste their code and pass them as your own. To keep yourself honest, you may also link to the website(s) or forum post(s) that helped you to the answer. Type out the code and credit them for their help. Explain the code in ways that you understand and can reference in the future. If you fail to follow best practices, you can face disciplinary action, which includes failing the assignment, failing the course, or facing other disciplinary action by the department or the university. I will report substantial or repeated cases of misconduct to the Office of Student Conduct & Community Standards for further review. Refer to [https://conduct.students.wisc.edu/misconduct/academic-integrity/](https://conduct.students.wisc.edu/misconduct/academic-integrity/) for more information.
 
 ## Diversity & Inclusion
 
@@ -125,83 +129,75 @@ From [diversity.wisc.edu](https://diversity.wisc.edu/): *Diversity is a source o
 
 From [https://mcburney.wisc.edu/instructor/](https://mcburney.wisc.edu/instructor/): *The University of Wisconsin-Madison supports the right of all enrolled students to a full and equal educational opportunity. The Americans with Disabilities Act (ADA), Wisconsin State Statute (36.12), and UW-Madison policy (Faculty Document 1071) require that students with disabilities be reasonably accommodated in instruction and campus life. Reasonable accommodations for students with disabilities is a shared faculty and student responsibility. Students are expected to inform faculty [me] of their need for instructional accommodations by the end of the third week of the semester, or as soon as possible after a disability has been incurred or recognized. I will work either directly with the student you or in coordination with the McBurney Center to identify and provide reasonable instructional accommodations. Disability information, including instructional accommodations as part of a student’s educational record, is confidential and protected under FERPA.*
 
-If you observe any religious holidays, please let me know and we can discuss accommodations.
+If you observe any religious holidays, please let me know as soon as possible and we can discuss accommodations.
 
 Sudden life circumstances can certainly impact class performance. There are various resources on campus to help you navigate difficult times, such as the [Dean of Students Office](https://doso.students.wisc.edu/) and the [Division of Student Life](https://students.wisc.edu/).
 
-Please let me know as soon as possible if you require any accommodations at all, including anything that I did not mention. I want to ensure that this course contributes to your knowledge base rather than be a hindrance to your success.
+Please let me know as soon as possible if you require any accommodations, including anything that I did not mention. I want to ensure that this course contributes to your knowledge base rather hinder your success.
 
 # Resources
 
-At some point, you might get stuck, as we all do. But have no fear! Not only will this class allow you to make mistakes, you will have me and your fellow colleagues as resources. And, since computing tools are so ubiquitious in academic and professional circles, it is very likely that someone also has the same question as you do and asked it on an Internet forum. With any luck, someone may have even answered the question!
+At some point, you might get stuck, as we all do. But have no fear! Not only will this class allow you to make mistakes, you will have me and your fellow colleagues as resources. And, since computing tools are so ubiquitous in academic and professional circles, it is very likely that someone asked your exact question on an Internet forum With any luck, someone may have even answered the question!
 
 1. **Class Attendance** You should attend both hours of class. The first hour introduces you to concept, and the second hour allows you to ask questions about what you just learned. This keeps your concepts fresh and allows you to resolve any outstanding items of confusion.
 
-2. **Class Materials** I strongly recommend that you reference the class materials first. Rarely would I include a question in an assignment that you will be unable to solve by applying concepts that we went over in lecture. The answer keys will reference the slide where the concept is discussed in case you want to go back to the exact slide and review the concept.
+2. **Class Materials** I strongly recommend that you reference the class materials first. Rarely would I include a question in an assignment that you will be unable to solve by applying concepts that we went over in lecture. The answer keys will reference the section where the concept is discussed in case you want to go back to the exact section and review the concept.
 
-3. **Collaboration** As we continue to navigate our virtual higher education landscape, we are confronted with hurdles when it comes to ease of collaboration. Even in normal times, however, we often have to work with collaborators who we cannot meet in-person. As such, I highly encourage you to collaborate with each other on weekly assignments. For effective collaboration, I recommend doing the exercises on your own, identifying the questions you need help on, then showing up to a collaborative space with what you know and what you don't know. Collaboration *does* mean seeking help among each other, but it *does not* mean copying and pasting text and code written by someone else and passing it off as your own. If you use your colleague's code, as one often do when they learn coding, type out the code yourself and make sure to *credit* your colleague for their work. If you have some experience with coding or feel comfortable with the material, please consider assisting your colleagues. Sharing knowledge is as rewarding as gaining knowledge, but hoarding knowledge is not rewarding at all.
+3. **Collaboration** As we continue to navigate our virtual higher education landscape, we are confronted with hurdles when it comes to collaboration. Even in normal times, however, we often have to work with collaborators who we cannot meet in-person. As such, I highly encourage you to collaborate with each other on weekly assignments. For effective collaboration, I recommend doing the exercises on your own, identifying the questions you need help on, then showing up to a collaborative space with what you know and what you don't know. Collaboration *does* mean seeking help from each other, but it *does not* mean copying and pasting text and code written by someone else and passing it off as your own. If you use your colleague's code, as one often do when they learn coding, type out the code yourself, change the variable names that mean something to you, and make sure to *credit* your colleague for their work. If you have some experience with coding or feel comfortable with the material, please consider assisting your colleagues. Sharing knowledge is as rewarding as gaining knowledge, but hoarding knowledge is not rewarding at all.
 
 4. **Slack** Staying connected is important. [Slack](https://slack.com/) is a communication platform that came to fame among software developers, but is now used by project teams of all stripes. Posting on Slack is not a requirement, but it is certainly a way for you to reach out to help from me and/or your colleagues and get an answer as soon as possible. If you believe your question will be beneficial to not only you, but to your colleagues as well, you should *definitely* post it on the Slack. As a graduate student, I'm in front of my computer quite a bit, but I will give you all a chance to help each other with questions from the assignment before I jump in. Some examples of Slack-friendly items include: questions about the assignments, resources that you have found useful on and off the web (e.g., books, websites, blogs, Twitter posts, videos), mnemonics, or cross-references with your other courses.
 
-5. **Office Hours** While I plan to be available on Slack on most weekdays (and maybe even weekends), I will also hold regular office hours where I will definitely be available unless otherwise noted. To schedule office hours with me, simply send me a direct Slack message during my regular office hours and I will call you via Slack once I am available.
+5. **Office Hours** While I plan to be available on Slack on most weekdays (and maybe even weekends), I will also hold regular office hours on Mondays from 3:00 to 5:00 PM CST, where I will definitely be available unless otherwise noted. To schedule *video* office hours with me, simply send me a direct Slack message during my regular office hours and I will video call you via Slack.
 
 6. **Email** If your question is of a personal nature and is specific to you and only you, please email me. Expect me to respond within 24 hours and if I do not, please feel free to email me again. You will *not* be annoying me.
 
-7. **Google (or your preferred search engine)** There are *tons* of resources online about R and Git. You will start to notice that your search results will often yield either posts from Stack Overflow and Stack Exchange. Use them. Much of Goggling in R to achieve required results is learning how to refer to certain commands. You learn as you go. Sometimes the Stack Overflow and Stack Exchange communities can get a bit abrasive (in my experience). I recommend the [R Studio Community](https://community.rstudio.com/) if you do actually want to ask a question because you can't find an answer to it anywhere. I love Googling and I have spent many hours going down on various R-related Googling rabbit holes late into the night. I don't recommend this. While it has helped me learn *how* to Google, there comes a point (it's the 5-hour mark for me, but it might be the 2-hour mark for you) where you should ask for help.
+7. **Google (or your preferred search engine)** There are *tons* of online resources about R and Git. You will start to notice that your search results will often yield either posts from Stack Overflow and Stack Exchange. Use them. Much of Goggling in R to achieve required results is learning how to refer to certain commands. You learn as you go. Sometimes the Stack Overflow and Stack Exchange communities can get a bit abrasive (in my experience). I recommend the [R Studio Community](https://community.rstudio.com/) if you do actually want to ask a question because you can't find an answer to it anywhere. I love Googling and I have spent many hours going down on various R-related Googling rabbit holes late into the night. I don't recommend this. While it has helped me learn *how* to Google, there comes a point (it's the 5-hour mark for me, but it might be the 2-hour mark for you) where you should ask for help.
 
 # Class Schedule
 
 The schedule includes topics, resources, and due dates for the midterm and final projects. I will try to keep resources at a minimum. You will likely be overwhelmed by the R you will learn in PS 812 and the R you will learn in here, so I want to minimize the confusion and maximize the practicality. 
 
-I will try to provide some instructions for setting up everything you need prior to each lecture, but feel free to ask questions in class, on the Slack, or via email. I would rather give you time to set up everything in your own time and ask for help when convenient than feel left behind in class and freak out, which is often the story of my life.
+I will provide some instructions for setting up everything you need prior to each lecture, but feel free to ask questions in class, on the Slack, or via email. I would rather give you time to set up everything in your own time and ask for help when convenient than feel left behind in class and freak out, which is often the story of my life.
 
 This syllabus might evolve over time and accommodate any feedback I receive over the course of the semester. Think of this syllabus as a road map. There are certain destinations we'd like to hit, but it's possible for us to take a different route to get there.
 
-## `r advdate(mon, 1)`: Set up all the tools you will need for the class, including R, R Studio, R Markdown (knit as PDF and HTML), Git, and Github.
+### September 10 - Setting Up
+Set up all the tools you will need for the class, including R, R Studio, R Markdown (knit as PDF and HTML), Git, and Github.
 
-* [Connect RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html)
-* [Markdown Syntax](https://bookdown.org/yihui/rmarkdown/markdown-syntax.html)
+### September 17 - Workflow
+Do you what you already do but with cool computing tools - part i: create a project and start writing a document in APA style.
 
-## `r advdate(mon, 2)`: Do you what you already do but with cool computing tools - part i: create a project and start writing a document in APA style.
+### September 24 - Bibliography
+Do you what you already do but with cool computing tools - part ii: create a bibliography
 
-* [Project Management with R Studio](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/)
-* [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html#:~:text=Math%20inside%20RMarkdown,10n%3D1n2.)
+### October 8 - Git Branch
+How to create "branches" in Git so you and your team can work on multiple versions of the same project before merging it back to the most up-to-date version.
 
-##  `r advdate(mon, 3)`: Do you what you already do but with cool computing tools - part ii: create a bibliography
+### October 15 - Base R vs. Tidyverse
+Base R vs. Tidyverse, and how to be comfortable with both.
 
-* [Bibliographies and citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
+### October 22 - Functions
+Some useful functions for your own work and PS 812.
 
-##  `r advdate(mon, 4)`: Base R vs. Tidyverse, and how to be comfortable with both.
+### October 29
+Manipulate data.
 
-* [Syntax equivalents: base R vs Tidyverse](https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html)
+### November 5 
+Create graphics.
 
-##  `r advdate(mon, 5)`: Some useful functions for your own work and PS 812.
+### November 12
+Regression and model outputs.
 
-* [Iterations](https://r4ds.had.co.nz/iteration.html) and [Many Models](https://r4ds.had.co.nz/many-models.html)
-* [Purrr - tips and tricks](https://www.hvitfeldt.me/blog/purrr-tips-and-tricks/)
+### November 19
+Useful R Packages and Computing Tools
 
-##  `r advdate(mon, 6)`: Manipulate data.
+    Suggestions welcome! Let me know if there are quantitative/qualitative tools that you think will be helpful for your research and I will do my best to make a recommendation.
 
-* [Data Manipulation](https://mikedecr.github.io/courses/811/811-03-data/)
+### November 26
+Thanksgiving Day - No class!
 
-##  `r advdate(mon, 7)`: Create graphics.
+### December 3
+Create your own GitHub Pages website.
 
-* [Graphics](https://mikedecr.github.io/courses/811/811-04-graphics/)
-
-##  `r advdate(mon, 8)`: Regression and model outputs.
-
-* [Analysis](https://mikedecr.github.io/courses/811/811-05-analysis/)
-* [Regression Analysis in R](https://raw.githack.com/uo-ec607/lectures/master/08-regression/08-regression.html)
-
-##  `r advdate(mon, 9)`: Dealing with data.
-
-##  `r advdate(mon, 10)`: Popular analysis tools: text analysis, mturkr.
-
-##  `r advdate(mon, 11)`: Some more git.
-
-##  `r advdate(mon, 12)`: Create your own Github website.
-
-* [How to Host a Website on Github](https://marcyshieh.github.io/posts/github-website-tutorial/)
-
-##  `r advdate(mon, 13)`: Final project presentations.
-
+### December 10
+Final project presentations.

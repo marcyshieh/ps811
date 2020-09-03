@@ -35,7 +35,7 @@
 \renewcommand{\footrulewidth}{0.0pt} 
 \lhead{}
 \chead{}
-\rhead{\footnotesize DRAFT - PS 811: Introduction to Statistical Computing -- Fall 2020}
+\rhead{\footnotesize PS 811: Introduction to Statistical Computing -- Fall 2020}
 \lfoot{}
 \cfoot{\small \thepage/\pageref*{LastPage}}
 \rfoot{}
@@ -75,7 +75,7 @@
             bookmarks=true,
             pdfauthor={ ()},
              pdfkeywords = {},  
-            pdftitle={DRAFT - PS 811: Introduction to Statistical Computing},
+            pdftitle={PS 811: Introduction to Statistical Computing},
             colorlinks=true,
             citecolor=blue,
             urlcolor=blue,
@@ -92,7 +92,7 @@
 
 \usepackage{setspace}
 
-\title{DRAFT - PS 811: Introduction to Statistical Computing}
+\title{PS 811: Introduction to Statistical Computing}
 \author{Marcy Shieh}
 \date{Fall 2020}
 
@@ -110,9 +110,9 @@
 	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
 
-E-mail: \texttt{\href{mailto:mshieh2@wisc.edu}{\nolinkurl{mshieh2@wisc.edu}}} & Web: \href{http://marcyshieh.github.io}{\tt marcyshieh.github.io}\\
-Office Hours: TBD  &  Class Hours: TBD\\
-Office: polisci811-fall2020.slack.com  & Class Room: TBD\\
+E-mail: \texttt{\href{mailto:mshieh2@wisc.edu}{\nolinkurl{mshieh2@wisc.edu}}} & Web: \href{http://marcyshieh.github.io/ps811/}{\tt marcyshieh.github.io/ps811/}\\
+Office Hours: Mondays, 3:00 to 5:00 PM CST  &  Class Hours: Thursdays, 10:00 to 11:00 AM CST\\
+Office: \url{polisci811-fall2020.slack.com}  & Class Room: Zoom (link on Canvas)\\
 	&  \\
 	\hline
 	\end{tabular*}
@@ -126,13 +126,13 @@ Office: polisci811-fall2020.slack.com  & Class Room: TBD\\
 
 Much of modern social science takes place on a computer. As you mature
 in the discipline, you will find yourself desperate for efficiency and
-organization. This class will guide both quantatiative and qualitative
+organization. This class will guide both quantitative and qualitative
 scholars on how to better organize data, conduct analyses, compile
 literature reviews, create bibliographies, and complete a paper using
 popular computational tools and reproducible workflows. While many
-research projects are inundated with decisions that require theoretical
-justification, this class will at least help you make your analytical
-work transparent to the casual interloper.
+research projects are inundated with decisions that require extensive
+theoretical justification, this class will at least help you make your
+analytically work transparent to the casual interloper.
 
 Political Science 811 is an introductory class of computing resources
 for political and social sciences. While not all political scientists
@@ -156,7 +156,7 @@ but they leave a gap between ``doing the research'' and ``writing the
 paper.'' This class is meant to fill in that gap, which can often be
 complicated, confusing, and ambiguous. The hope is that this class will
 introduce you to tools that will ameliorate that daunting chasm, or at
-least make it more managaeable.\footnote{Special thanks to my PS 811
+least make it more manageable.\footnote{Special thanks to my PS 811
   predecessors, \href{https://mikedecr.github.io/}{Mike DeCrescenzo} and
   \href{https://judgelord.github.io}{Devin Judge-Lord}, for sharing
   their materials with me.}
@@ -184,16 +184,15 @@ expectation that students will work on course materials for about two
 (2) hours out of the classroom for every class period.
 
 Our course will meet for two (2) hours every week. Students
-\emph{should} attend the first hour synchronously (TBD) or
-asynchronously to gain all the necessary materials for the course. This
-hour will include lectures, code demos, and some applied exercises.
-While there may be some code snippets on the lecture slides, I will
-upload the full code scripts to Canvas so you can reference them later.
+\emph{should} attend the first hour synchronously on Thursdays from
+10:00 to 11:00 AM CST or asynchronously to gain all the necessary
+materials to complete the assignments for the course. This hour will
+include lectures, code demos, and applied exercises.
 
-Student then have the option to attend the second hour, where I will go
-over some questions on the problem set and answer any burning questions
-you may have about the course materials. In essence, you may interpret
-the second hour as additional office hours.
+Student then have the option to attend the second hour on Slack, where I
+will be available to go over questions on the problem set and answer any
+burning questions you may have about the course materials. In essence,
+you may interpret the second hour as additional office hours.
 
 \hypertarget{required-software}{%
 \section{Required Software}\label{required-software}}
@@ -205,21 +204,21 @@ computer. Fortunately, they are all free.
 \item
   \textbf{R}, a free software environment to conduct statistical
   analyses and create data visualizations. For those uninitiated to the
-  world of statistical programming, R is basically a super powerful
-  version of Microsoft Excel, but way more efficient. Download R at
-  \url{https://www.r-project.org/}.
+  world of statistical programming but has worked in an office before, R
+  is basically a super powerful version of Microsoft Excel, but way more
+  efficient. Download R at \url{https://www.r-project.org/}.
 \item
   \textbf{R Studio}, a user-friendly environment for programming in R.
   One way to think about this is that R is the engine, and R Studio is
   the car. You can use the engine without the car, but you cannot drive
-  the car without the engine. Or something like that. Downloda RStudio
+  the car without the engine. Or something like that. Download RStudio
   Desktop (the free open source version) at
   \url{https://rstudio.com/products/rstudio/download/}.
 \item
   \textbf{LaTeX}, a software system for preparing documents. I don't
-  envision us using LaTeX in its natural state, but you will need to
-  download the software in order to compile R Markdown documents.
-  Download LaTeX at \url{https://www.latex-project.org/get/}.
+  envision us using LaTeX in its purest form too often, but you will
+  need to download the software in order to compile R Markdown
+  documents. Download LaTeX at \url{https://www.latex-project.org/get/}.
 \item
   \textbf{Git}, a version control system. You know about track changes
   in Microsoft Word? Git is track changes, but for all your files. It
@@ -234,19 +233,22 @@ computer. Fortunately, they are all free.
   Check whether you have Git on your computer at
   \url{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}.
   \textbf{Do not install from source.}
+\item
+  \textbf{Zotero}, a bibliography management system. This tool can help
+  you manage all your (potential) citations. Download Zotoro at
+  \url{https://www.zotero.org/download/}.
 \end{itemize}
 
 I am not dogmatic about how you choose to code in R, as long as you
 \emph{know} how to code and \emph{understand} what you are doing. Half
-the battle with learning R is fostering confidence and curiosity. Only
+the battle with learning R is cultivating confidence and curiosity. Only
 then, would you feel comfortable running different commands and Googling
 your R questions.
 
 This class is an introduction on how to use R, and aims to give you the
-ability to self-learn R and be literate in all kinds of R code. Thus, I
-will try to cover both base R and the Tidyverse language, which I will
-talk about more during the course, but it is ultimately up to you to
-determine what works for you.
+ability to self-learn R and be literate in R code. Thus, I will try to
+cover both base R and the Tidyverse language, but it is ultimately up to
+you to determine what works for you.
 
 \hypertarget{deliverables-grading}{%
 \section{Deliverables \& Grading}\label{deliverables-grading}}
@@ -262,22 +264,23 @@ Late assignments will not be accepted.
   apply the skills learned in class and will focus on data tasks in R,
   then integrating them into the Git workflow.
 \item
-  \textbf{Midterm project: 20\%} You and a partner will work on a
-  project together where you demonstrate your ability to use Git for
-  collaboration purposes. You will present your project live or submit a
-  recording. Your colleagues can provide feedback on Slack.
+  \textbf{Midterm project: 20\%} You and a partner will submit a project
+  where you demonstrate your ability to use Git for collaboration
+  purposes.
 \item
   \textbf{Final project: 30\%} You will be responsible for submitting a
   project repository that includes the R Markdown paper, the R code for
   the analysis, graphics, and bibliography, etc. and is
-  version-controlled with Git and pushed to Github. In essence, I should
+  version-controlled with Git and pushed to GitHub. Ultimately, I should
   be able to reproduce your entire project with the files in your
-  project respository. You will present your project live or submit a
-  recording. Your colleagues can provide feedback on Slack.
+  project repository. You will present your project live or submit a
+  recording. Your colleagues will provide feedback on Slack.
 \end{enumerate}
 
 \hypertarget{class-logistics}{%
 \section{Class Logistics}\label{class-logistics}}
+
+Some bureaucratic details about the class.
 
 \hypertarget{attendance}{%
 \subsection{Attendance}\label{attendance}}
@@ -288,8 +291,8 @@ lectures in your own time. The advantage of attending class
 synchronously is that you will be \emph{encouraged} to ask questions as
 you learn the concepts. However, if it is not possible at all for you to
 attend lecture synchronously (e.g., life circumstances, time zone
-differences), please let me know and we can discuss accommodation
-options.
+differences), please let me know as soon as possible and we can discuss
+accommodation options.
 
 \hypertarget{academic-integrity}{%
 \subsection{Academic Integrity}\label{academic-integrity}}
@@ -298,16 +301,16 @@ Academic integrity is important to the University of Wisconsin--Madison.
 As such, please do not plagiarize, use unauthorized materials or
 fabricated data, tamper with another student's work, or assist any
 students in these acts. If you collaborated with your colleagues (i.e.,
-worked on the assignment together), do not copy and paste their code or
+worked on the assignment together), do not copy and paste their code and
 pass them as your own. To keep yourself honest, you may also link to the
-website(s) or forum post(s) that helped you find the answer. Type out
-the code and credit them for their help. Explain the code in ways that
-you understand and can reference in the future. If you fail to follow
-best practices, you can face disciplinary action, which includes failing
-the assignment, failing the course, or facing other disciplinary action
-by the department or the university. I will report substantial or
-repeated cases of misconduct to the Office of Student Conduct \&
-Community Standards for further review. Refer to
+website(s) or forum post(s) that helped you to the answer. Type out the
+code and credit them for their help. Explain the code in ways that you
+understand and can reference in the future. If you fail to follow best
+practices, you can face disciplinary action, which includes failing the
+assignment, failing the course, or facing other disciplinary action by
+the department or the university. I will report substantial or repeated
+cases of misconduct to the Office of Student Conduct \& Community
+Standards for further review. Refer to
 \url{https://conduct.students.wisc.edu/misconduct/academic-integrity/}
 for more information.
 
@@ -344,8 +347,8 @@ reasonable instructional accommodations. Disability information,
 including instructional accommodations as part of a student's
 educational record, is confidential and protected under FERPA.}
 
-If you observe any religious holidays, please let me know and we can
-discuss accommodations.
+If you observe any religious holidays, please let me know as soon as
+possible and we can discuss accommodations.
 
 Sudden life circumstances can certainly impact class performance. There
 are various resources on campus to help you navigate difficult times,
@@ -353,10 +356,10 @@ such as the \href{https://doso.students.wisc.edu/}{Dean of Students
 Office} and the \href{https://students.wisc.edu/}{Division of Student
 Life}.
 
-Please let me know as soon as possible if you require any accommodations
-at all, including anything that I did not mention. I want to ensure that
-this course contributes to your knowledge base rather than be a
-hindrance to your success.
+Please let me know as soon as possible if you require any
+accommodations, including anything that I did not mention. I want to
+ensure that this course contributes to your knowledge base rather hinder
+your success.
 
 \hypertarget{resources}{%
 \section{Resources}\label{resources}}
@@ -364,9 +367,9 @@ hindrance to your success.
 At some point, you might get stuck, as we all do. But have no fear! Not
 only will this class allow you to make mistakes, you will have me and
 your fellow colleagues as resources. And, since computing tools are so
-ubiquitious in academic and professional circles, it is very likely that
-someone also has the same question as you do and asked it on an Internet
-forum. With any luck, someone may have even answered the question!
+ubiquitous in academic and professional circles, it is very likely that
+someone asked your exact question on an Internet forum With any luck,
+someone may have even answered the question!
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -379,27 +382,28 @@ forum. With any luck, someone may have even answered the question!
   \textbf{Class Materials} I strongly recommend that you reference the
   class materials first. Rarely would I include a question in an
   assignment that you will be unable to solve by applying concepts that
-  we went over in lecture. The answer keys will reference the slide
+  we went over in lecture. The answer keys will reference the section
   where the concept is discussed in case you want to go back to the
-  exact slide and review the concept.
+  exact section and review the concept.
 \item
   \textbf{Collaboration} As we continue to navigate our virtual higher
   education landscape, we are confronted with hurdles when it comes to
-  ease of collaboration. Even in normal times, however, we often have to
-  work with collaborators who we cannot meet in-person. As such, I
-  highly encourage you to collaborate with each other on weekly
-  assignments. For effective collaboration, I recommend doing the
-  exercises on your own, identifying the questions you need help on,
-  then showing up to a collaborative space with what you know and what
-  you don't know. Collaboration \emph{does} mean seeking help among each
-  other, but it \emph{does not} mean copying and pasting text and code
-  written by someone else and passing it off as your own. If you use
-  your colleague's code, as one often do when they learn coding, type
-  out the code yourself and make sure to \emph{credit} your colleague
-  for their work. If you have some experience with coding or feel
-  comfortable with the material, please consider assisting your
-  colleagues. Sharing knowledge is as rewarding as gaining knowledge,
-  but hoarding knowledge is not rewarding at all.
+  collaboration. Even in normal times, however, we often have to work
+  with collaborators who we cannot meet in-person. As such, I highly
+  encourage you to collaborate with each other on weekly assignments.
+  For effective collaboration, I recommend doing the exercises on your
+  own, identifying the questions you need help on, then showing up to a
+  collaborative space with what you know and what you don't know.
+  Collaboration \emph{does} mean seeking help from each other, but it
+  \emph{does not} mean copying and pasting text and code written by
+  someone else and passing it off as your own. If you use your
+  colleague's code, as one often do when they learn coding, type out the
+  code yourself, change the variable names that mean something to you,
+  and make sure to \emph{credit} your colleague for their work. If you
+  have some experience with coding or feel comfortable with the
+  material, please consider assisting your colleagues. Sharing knowledge
+  is as rewarding as gaining knowledge, but hoarding knowledge is not
+  rewarding at all.
 \item
   \textbf{Slack} Staying connected is important.
   \href{https://slack.com/}{Slack} is a communication platform that came
@@ -418,10 +422,10 @@ forum. With any luck, someone may have even answered the question!
 \item
   \textbf{Office Hours} While I plan to be available on Slack on most
   weekdays (and maybe even weekends), I will also hold regular office
-  hours where I will definitely be available unless otherwise noted. To
-  schedule office hours with me, simply send me a direct Slack message
-  during my regular office hours and I will call you via Slack once I am
-  available.
+  hours on Mondays from 3:00 to 5:00 PM CST, where I will definitely be
+  available unless otherwise noted. To schedule \emph{video} office
+  hours with me, simply send me a direct Slack message during my regular
+  office hours and I will video call you via Slack.
 \item
   \textbf{Email} If your question is of a personal nature and is
   specific to you and only you, please email me. Expect me to respond
@@ -429,7 +433,7 @@ forum. With any luck, someone may have even answered the question!
   You will \emph{not} be annoying me.
 \item
   \textbf{Google (or your preferred search engine)} There are
-  \emph{tons} of resources online about R and Git. You will start to
+  \emph{tons} of online resources about R and Git. You will start to
   notice that your search results will often yield either posts from
   Stack Overflow and Stack Exchange. Use them. Much of Goggling in R to
   achieve required results is learning how to refer to certain commands.
@@ -453,149 +457,93 @@ likely be overwhelmed by the R you will learn in PS 812 and the R you
 will learn in here, so I want to minimize the confusion and maximize the
 practicality.
 
-I will try to provide some instructions for setting up everything you
-need prior to each lecture, but feel free to ask questions in class, on
-the Slack, or via email. I would rather give you time to set up
-everything in your own time and ask for help when convenient than feel
-left behind in class and freak out, which is often the story of my life.
+I will provide some instructions for setting up everything you need
+prior to each lecture, but feel free to ask questions in class, on the
+Slack, or via email. I would rather give you time to set up everything
+in your own time and ask for help when convenient than feel left behind
+in class and freak out, which is often the story of my life.
 
 This syllabus might evolve over time and accommodate any feedback I
 receive over the course of the semester. Think of this syllabus as a
 road map. There are certain destinations we'd like to hit, but it's
 possible for us to take a different route to get there.
 
-\hypertarget{week-01-0815---0819-set-up-all-the-tools-you-will-need-for-the-class-including-r-r-studio-r-markdown-knit-as-pdf-and-html-git-and-github.}{%
-\subsection{Week 01, 08/15 - 08/19: Set up all the tools you will need
-for the class, including R, R Studio, R Markdown (knit as PDF and HTML),
-Git, and
-Github.}\label{week-01-0815---0819-set-up-all-the-tools-you-will-need-for-the-class-including-r-r-studio-r-markdown-knit-as-pdf-and-html-git-and-github.}}
+\hypertarget{september-10---setting-up}{%
+\subsubsection{September 10 - Setting
+Up}\label{september-10---setting-up}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://happygitwithr.com/rstudio-git-github.html}{Connect
-  RStudio to Git and Github}
-\item
-  \href{https://bookdown.org/yihui/rmarkdown/markdown-syntax.html}{Markdown
-  Syntax}
-\end{itemize}
+Set up all the tools you will need for the class, including R, R Studio,
+R Markdown (knit as PDF and HTML), Git, and Github.
 
-\hypertarget{week-02-0822---0826-do-you-what-you-already-do-but-with-cool-computing-tools---part-i-create-a-project-and-start-writing-a-document-in-apa-style.}{%
-\subsection{Week 02, 08/22 - 08/26: Do you what you already do but with
-cool computing tools - part i: create a project and start writing a
-document in APA
-style.}\label{week-02-0822---0826-do-you-what-you-already-do-but-with-cool-computing-tools---part-i-create-a-project-and-start-writing-a-document-in-apa-style.}}
+\hypertarget{september-17---workflow}{%
+\subsubsection{September 17 - Workflow}\label{september-17---workflow}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/}{Project
-  Management with R Studio}
-\item
-  \href{https://rpruim.github.io/s341/S19/from-class/MathinRmd.html\#:~:text=Math\%20inside\%20RMarkdown,10n\%3D1n2.}{Mathematics
-  in R Markdown}
-\end{itemize}
+Do you what you already do but with cool computing tools - part i:
+create a project and start writing a document in APA style.
 
-\hypertarget{week-03-0829---0902-do-you-what-you-already-do-but-with-cool-computing-tools---part-ii-create-a-bibliography}{%
-\subsection{Week 03, 08/29 - 09/02: Do you what you already do but with
-cool computing tools - part ii: create a
-bibliography}\label{week-03-0829---0902-do-you-what-you-already-do-but-with-cool-computing-tools---part-ii-create-a-bibliography}}
+\hypertarget{september-24---bibliography}{%
+\subsubsection{September 24 -
+Bibliography}\label{september-24---bibliography}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html}{Bibliographies
-  and citations}
-\end{itemize}
+Do you what you already do but with cool computing tools - part ii:
+create a bibliography
 
-\hypertarget{week-04-0905---0909-base-r-vs.-tidyverse-and-how-to-be-comfortable-with-both.}{%
-\subsection{Week 04, 09/05 - 09/09: Base R vs.~Tidyverse, and how to be
-comfortable with
-both.}\label{week-04-0905---0909-base-r-vs.-tidyverse-and-how-to-be-comfortable-with-both.}}
+\hypertarget{october-8---git-branch}{%
+\subsubsection{October 8 - Git Branch}\label{october-8---git-branch}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html}{Syntax
-  equivalents: base R vs Tidyverse}
-\end{itemize}
+How to create ``branches'' in Git so you and your team can work on
+multiple versions of the same project before merging it back to the most
+up-to-date version.
 
-\hypertarget{week-05-0912---0916-some-useful-functions-for-your-own-work-and-ps-812.}{%
-\subsection{Week 05, 09/12 - 09/16: Some useful functions for your own
-work and PS
-812.}\label{week-05-0912---0916-some-useful-functions-for-your-own-work-and-ps-812.}}
+\hypertarget{october-15---base-r-vs.-tidyverse}{%
+\subsubsection{October 15 - Base R
+vs.~Tidyverse}\label{october-15---base-r-vs.-tidyverse}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://r4ds.had.co.nz/iteration.html}{Iterations} and
-  \href{https://r4ds.had.co.nz/many-models.html}{Many Models}
-\item
-  \href{https://www.hvitfeldt.me/blog/purrr-tips-and-tricks/}{Purrr -
-  tips and tricks}
-\end{itemize}
+Base R vs.~Tidyverse, and how to be comfortable with both.
 
-\hypertarget{week-06-0919---0923-manipulate-data.}{%
-\subsection{Week 06, 09/19 - 09/23: Manipulate
-data.}\label{week-06-0919---0923-manipulate-data.}}
+\hypertarget{october-22---functions}{%
+\subsubsection{October 22 - Functions}\label{october-22---functions}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://mikedecr.github.io/courses/811/811-03-data/}{Data
-  Manipulation}
-\end{itemize}
+Some useful functions for your own work and PS 812.
 
-\hypertarget{week-07-0926---0930-create-graphics.}{%
-\subsection{Week 07, 09/26 - 09/30: Create
-graphics.}\label{week-07-0926---0930-create-graphics.}}
+\hypertarget{october-29}{%
+\subsubsection{October 29}\label{october-29}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://mikedecr.github.io/courses/811/811-04-graphics/}{Graphics}
-\end{itemize}
+Manipulate data.
 
-\hypertarget{week-08-1003---1007-regression-and-model-outputs.}{%
-\subsection{Week 08, 10/03 - 10/07: Regression and model
-outputs.}\label{week-08-1003---1007-regression-and-model-outputs.}}
+\hypertarget{november-5}{%
+\subsubsection{November 5}\label{november-5}}
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://mikedecr.github.io/courses/811/811-05-analysis/}{Analysis}
-\item
-  \href{https://raw.githack.com/uo-ec607/lectures/master/08-regression/08-regression.html}{Regression
-  Analysis in R}
-\end{itemize}
+Create graphics.
 
-\hypertarget{week-09-1010---1014-dealing-with-data.}{%
-\subsection{Week 09, 10/10 - 10/14: Dealing with
-data.}\label{week-09-1010---1014-dealing-with-data.}}
+\hypertarget{november-12}{%
+\subsubsection{November 12}\label{november-12}}
 
-\hypertarget{week-10-1017---1021-popular-analysis-tools-text-analysis-mturkr.}{%
-\subsection{Week 10, 10/17 - 10/21: Popular analysis tools: text
-analysis,
-mturkr.}\label{week-10-1017---1021-popular-analysis-tools-text-analysis-mturkr.}}
+Regression and model outputs.
 
-\hypertarget{week-11-1024---1028-some-more-git.}{%
-\subsection{Week 11, 10/24 - 10/28: Some more
-git.}\label{week-11-1024---1028-some-more-git.}}
+\hypertarget{november-19}{%
+\subsubsection{November 19}\label{november-19}}
 
-\hypertarget{week-12-1031---1104-create-your-own-github-website.}{%
-\subsection{Week 12, 10/31 - 11/04: Create your own Github
-website.}\label{week-12-1031---1104-create-your-own-github-website.}}
+Useful R Packages and Computing Tools
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://marcyshieh.github.io/posts/github-website-tutorial/}{How
-  to Host a Website on Github}
-\end{itemize}
+\begin{verbatim}
+Suggestions welcome! Let me know if there are quantitative/qualitative tools that you think will be helpful for your research and I will do my best to make a recommendation.
+\end{verbatim}
 
-\hypertarget{week-13-1107---1111-final-project-presentations.}{%
-\subsection{Week 13, 11/07 - 11/11: Final project
-presentations.}\label{week-13-1107---1111-final-project-presentations.}}
+\hypertarget{november-26}{%
+\subsubsection{November 26}\label{november-26}}
+
+Thanksgiving Day - No class!
+
+\hypertarget{december-3}{%
+\subsubsection{December 3}\label{december-3}}
+
+Create your own GitHub Pages website.
+
+\hypertarget{december-10}{%
+\subsubsection{December 10}\label{december-10}}
+
+Final project presentations.
 
 
 
