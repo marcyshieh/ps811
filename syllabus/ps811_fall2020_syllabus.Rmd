@@ -191,7 +191,7 @@ Regression and model outputs.
 ### November 19
 Useful R Packages and Computing Tools
 
-    Suggestions welcome! Let me know if there are quantitative/qualitative tools that you think will be helpful for your research and I will do my best to make a recommendation.
+Suggestions welcome! Let me know if there are quantitative/qualitative tools that you think will be helpful for your research and I will do my best to make a recommendation.
 
 ### November 26
 Thanksgiving Day - No class!
