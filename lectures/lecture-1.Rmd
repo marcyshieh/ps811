@@ -1,0 +1,81 @@
+---
+title: "Lecture 1. Syllabus and Setup"
+author: Marcy Shieh
+date: September 1, 2020
+output: beamer_presentation
+---
+
+# Goals
+
+- Review syllabus
+
+    - [https://github.com/marcyshieh/ps811/blob/master/syllabus/ps811_fall2020_syllabus.pdf](https://github.com/marcyshieh/ps811/blob/master/syllabus/ps811_fall2020_syllabus.pdf)
+    
+- Setup
+
+    - [https://marcyshieh.github.io/ps811/ps811-lecture-1-setup](https://marcyshieh.github.io/ps811/ps811-lecture-1-setup)
+
+# Class Materials
+
+- Files and folders
+
+    - [https://github.com/marcyshieh/ps811](https://github.com/marcyshieh/ps811)
+
+- Lecture supplements
+
+    - [https://marcyshieh.github.io/ps811/](https://marcyshieh.github.io/ps811/)
+
+# Logistics
+
+- An introduction to computing tools used by the discipline
+- 1-credit, pass or no pass
+- Class meets on Thursdays, 10am-11am CST on Zoom (required) and 11am-12pm on Slack to collaborate and ask quesstions (not required)
+- Office hours on Mondays, 3pm-5pm on Slack (or by appointment)
+- Let me try to say this without sounding like a loser, but I tend to be in front of my computer quite a bit so feel free to just message me on Slack if no one has responded to your question in the past 24 hours
+- Email me if you have personal requests
+
+# Learning Outcomes
+
+1. Become R-literate
+2. Prepare documents in R Markdown
+3. Manage projects using Git
+4. Use software to expedite your work
+
+- If you have a question that is specific to PS 812, *please* ask Dillon and/or Adeline. This class is meant to provide you tools to familiarize you with R and other computing tools and may even help you with some aspects of PS 812, but they are not exactly complementary.
+
+# Expectations
+
+- Submit assignments: weekly assignments (50%), midterm project (20%), and final project (50%)
+
+    - Weekly assignments will be in the "exercises" folder on the class Git repository: [https://github.com/marcyshieh/ps811/tree/master/exercises](https://github.com/marcyshieh/ps811/tree/master/exercises)
+    
+    - Open the .pdf file.
+
+- Ask questions
+
+- Help your colleagues on Slack
+
+- Credit your colleagues for helping you (and not blindly copy and paste their work and pass them off as your own)
+
+- Attendance is strongly recommended, but all lectures will be uploaded to Canvas
+
+# Class Schedule
+
+- First half of class will be focused on project workflow
+
+    - In the midterm project, you will get to demonstrate how well you can apply the tenets of a reproducible project workflow.
+
+- Second half of class will be focused on using R
+
+    - In the final project, you will demonstrate how well you can conduct data analysis in R. This analysis will hopefully be part of a paper you are writing for one of your seminars.
+    
+# Setting Up
+
+The setup materials are all here: [https://marcyshieh.github.io/ps811/ps811-lecture-1-setup](https://marcyshieh.github.io/ps811/ps811-lecture-1-setup)
+
+You will learn how to:
+
+- Create a Github account.
+- Set up Git.
+- Connect RStudio to your Github account.
+- Work with Git on RStudio.
