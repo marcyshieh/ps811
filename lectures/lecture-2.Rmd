@@ -1,0 +1,43 @@
+---
+title: "Lecture 2. Workflow"
+author: Marcy Shieh
+date: September 17, 2020
+output: beamer_presentation
+---
+
+# Logistics
+
+- Weekly assignments will be due right before lecture
+- If you need more time, just let me know
+- I will provide feedback over the weekend
+
+# Goals
+
+- Create a project (again)
+- Push R Markdown document to GitHub repository (again)
+- Write a paper in RStudio/Markdown
+
+# Why would I want to write my papers in R Markdown? I already own an awesome quill and rolls of parchment paper!
+
+- APA style template
+- No copying, pasting, and formatting from R to Microsoft Word
+- Great for replication
+- Even if you do not plan to subscribe to the Git workflow, writing a paper in R Markdown, especially if you plan to create any tables or graphs (so not necessarily quant-heavy work), will be very helpful
+- You won't have to labor over the bibliography page!
+
+# Marcy, you've convinced me! What do I need to do to get started?
+
+- Install R and RStudio (which you've already done!)
+- Install pandoc (you're in luck--this came with RStudio!)
+- Install a TeX distribution (y'all knitted--you're good on this front!)
+
+Basically, there is no reason for you to NOT write your papers in R Markdown.
+
+# You need to install papaja
+
+- `papaja` very obviously stands for "preparing APA journal articles"
+- Package is in development so you'll need to install it through `devtools`
+
+# Tour de template
+
+- Let's get started!
