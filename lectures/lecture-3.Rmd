@@ -1,0 +1,55 @@
+---
+title: "Lecture 2. Workflow"
+author: Marcy Shieh
+date: September 24, 2020
+output: beamer_presentation
+---
+
+# Logistics
+
+- Weekly assignments are due right before lecture
+- If you need more time, just let me know
+- I will provide feedback over the weekend
+- Make sure your repositories are public
+
+# Goals
+
+- Create a bibliography
+- Create in-text citations
+- Create a presentation in R Markdown
+
+# I already know how to create a bibliography. I am very good at finding information about books and articles, piecing disparate pieces of information together, copying and pasting to match style, and formatting stuff on Microsoft Word! Trust me, I don't need new tools.
+
+- Obviously, no one is going to stop you from living your best life, least of all I! If you find spending 5 hours on citing stuff to be therapeutic, be my guest!
+- But for everyone else, I'm here to say there's a better life out there.
+
+# Fine, Marcy, I've succumbed to peer pressure. I realized that all the cool kids want a better life and I want to be cool too. What do I have to do?
+
+- Download Zotero
+- Better Bibtex for Zotero
+- Install the `citr` package
+
+# I already know PowerPoint. Why do I need to know how to create a `beamer` presentation?
+
+- You may want to know how to virtue signal (a pretty good reason because we are in academia after all)
+- This is the only reason I am using `beamer` for my lecture slides for that class
+- You may want to be able to copy and paste your R graphics and tables into your presesentation and you don't want to make a mistake (the real reason)
+- You can also attach a reference slide at the end of your presentation!
+
+# What do I need to get started?
+
+Make sure this is on the top (YAML) of your R Markdown file:
+
+```
+---
+title: "Example Beamer Presentation"
+author: "Marcy Shieh"
+date: "9/22/2020"
+output: 
+  beamer_presentation:
+    theme: "Bergen"
+    colortheme: "beaver"
+    fonttheme: "structurebold"
+bibliography: references.bib
+---
+```

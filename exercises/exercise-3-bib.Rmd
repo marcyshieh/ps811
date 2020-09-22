@@ -9,9 +9,9 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-1. Add all the readings you did in seminar this week to Zotero.
+1. Add all the readings you did in seminars this week to Zotero.
 
-2. Create a R Markdown file using the papaja template in your ps811-exercises repository. Save it as `exercise-3-bib.Rmd`.
+2. Create a R Markdown file using the APA papaja template in your ps811-exercises repository. Save it as `exercise-3-bib.Rmd`.
 
 3. Customize the template to refer to this particular assignment.
 
@@ -24,8 +24,15 @@ knitr::opts_chunk$set(echo = TRUE)
     
     If you take good notes for your readings (as you should, for prelims prep), this exercise should be a breeze.
     
-5. Each group of readings should go under a header with the seminar name.
+5. Each group of readings should go under a header with the name of the seminar.
 
 6. Knit to PDF.
+
+8. Create a `beamer` presentation of what you liked and didn't like about the readings this week. In essence, just make three slides:
+
+    * A title slide
+    * Pros
+    * Cons
+    * Reference page
 
 7. Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.
