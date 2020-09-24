@@ -1,5 +1,5 @@
 ---
-title: "Lecture 2. Workflow"
+title: "Lecture 3. Workflow"
 author: Marcy Shieh
 date: September 24, 2020
 output: beamer_presentation
@@ -7,7 +7,7 @@ output: beamer_presentation
 
 # Logistics
 
-- Weekly assignments are due right before lecture
+- Weekly assignments are now due Friday at 12PM CST!!
 - If you need more time, just let me know
 - I will provide feedback over the weekend
 - Make sure your repositories are public
