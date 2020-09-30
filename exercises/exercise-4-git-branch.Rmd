@@ -1,7 +1,7 @@
 ---
 title: 'Exercise 4: Git Branch'
 author: "Marcy Shieh"
-date: "9/24/2020"
+date: "10/01/2020"
 output: pdf_document
 ---
 
@@ -21,13 +21,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 You may use command line or RStudio to complete these tasks. Whatever you feel more comfortable with.
 
-1. Once your partner confirms that they have invited you as a collaboorator, you should accept the invitation and go to their Github repository. 
+1. Once your partner confirms that they have invited you as a collaboorator, you should accept the invitation and go to the Github repository you have been invited to collaborate on.
 
-2. Clone their repository so you can work on their repository on your computer.
+2. Clone the repository so you can work on their repository on your computer.
 
-3. Make sure you in their `feedback` branch.
+3. Make sure you are in their `feedback` branch.
 
-4. Review their `exercise-3-bib.Rmd` document and add some comments and questions.
+4. Review their `exercise-3-bib.Rmd` document and add some comments and questions about the seminar readings.
 
 5. Knit to PDF.
 
