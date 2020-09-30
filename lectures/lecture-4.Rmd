@@ -1,0 +1,33 @@
+---
+title: "Lecture 4. Git Branch & Commands"
+author: Marcy Shieh
+date: October 1, 2020
+output: beamer_presentation
+---
+
+# Logistics
+
+- Weekly assignments are now due Friday at 12PM CST!!
+- If you need more time, PLEASE let me know
+- I will provide feedback over the weekend
+- Make sure your repositories are public
+
+# Goals
+
+- Add a collaborator
+- Create a branch
+- Use git on the command line
+
+# How is git useful for collaboration?
+
+- Efficient
+- Historical record
+
+# What is the point of creating a branch?
+
+- Different versions
+- Software example
+
+# What's the point of learning git on the command line?
+
+- Many git tutorials discuss git in terms of command lines
