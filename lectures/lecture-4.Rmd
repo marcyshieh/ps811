@@ -13,6 +13,7 @@ output: beamer_presentation
 - Make sure your repositories are public
 - Revisions: you get a week to re-submit
     - I want to make sure that you at least get the process down
+    - It is to build confidence
 
 # Goals
 
