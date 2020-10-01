@@ -11,6 +11,8 @@ output: beamer_presentation
 - If you need more time, PLEASE let me know
 - I will provide feedback over the weekend
 - Make sure your repositories are public
+- Revisions: you get a week to re-submit
+    - I want to make sure that you at least get the process down
 
 # Goals
 
