@@ -1,0 +1,89 @@
+---
+title: 'Exercise 5: Base R vs. Tidyverse'
+author: "Marcy Shieh"
+date: "9/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Prerequisites
+
+1. Open you `ps811-exercises` folder.
+
+2. Go to File > New File > R Script.
+
+3. Save file as `exercise-5-code.R`.
+
+4. Load R packages installed in Lecture 5.
+
+# Base R tasks
+
+1. Download the [food_coded.csv file from Kaggle](https://www.kaggle.com/borapajo/food-choices?select=food_coded.csv).
+
+2. Load the CSV file into your R environment.
+
+    Open the `codebook_food.docx` file for guidance.
+
+3. Extract the first 95 rows.
+
+4. Look at the following variables using both name and column index/number.
+
+    * GPA
+    * calories_chicken
+    * drink
+    * fav_cuisine
+    * father_profession
+    * mother_profession
+
+5. Create a new variable for how healthy each person feels but convert the scale from 1 to 10 to 1 to 100.
+
+6. Filter to students who are female and have GPAs that are above 3.0.
+
+7. Arrange their favorite cuisine in alphabetical order.
+
+8. Find the mean and standard deviation for the following variables, and summarize them in a data frame.
+
+    * chicken_calories
+    * tortilla_calories
+    * turkey_calories
+    * waffle_calories
+    
+9. Summarize GPA and weight within the gender and cuisine variables.
+
+# Tidyverse tasks
+
+1. Download the [facebook-fact-check.csv file from Kaggle](https://www.kaggle.com/mrisdal/fact-checking-facebook-politics-pages?select=facebook-fact-check.csv).
+
+2. Load the CSV file into your R environment.
+
+3. Extract the last 500 rows.
+
+    Hint: Check out the [top_n() page](https://rdrr.io/github/YTLogos/dplyr/man/top_n.html) to figure out how to extract the lasst 500 rows instead of the firsst 500 rows.
+    
+4. Look at the even-numbered column indices only. Identify them by name.
+
+5. Using `mutate`, create a new variable called `post_type_coded` that renames each post type to the following:
+
+    * link = 1
+    * photo = 2
+    * text = 3
+    * video = 4
+    
+    Hint: You want to make sure that these text categories are *equal* to these numeric values.
+    
+6. Arrange page names in reverse order.
+    
+7. Find the mean and standard deviation for the following variables, and summarize them.
+
+    * share_count
+    * reaction_count
+    * comment_count
+
+8. Summarize the mean and standard deviations in Question 7 with the mainstream variables.
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.
