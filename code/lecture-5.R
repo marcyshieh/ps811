@@ -171,7 +171,7 @@ avg <- function(x) {
 # insert function that you created into a sapply
 fm1 <- sapply(m1, avg)
 fm1
-#### ENND APPLY TUTORIAL ####
+#### END APPLY TUTORIAL ####
 
 # vectorizing
 # a vector is a sequence of elements with the same type
