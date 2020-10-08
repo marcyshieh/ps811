@@ -1,0 +1,38 @@
+---
+title: "Lecture 5. Functions"
+author: Marcy Shieh
+date: October 8, 2020
+output: beamer_presentation
+---
+
+# Logistics
+
+- Weekly assignments are now due Friday at 12PM CST!!
+- If you need more time, PLEASE let me know
+- I will provide feedback over the weekend
+- Make sure your repositories are public
+- R assignments:
+    - I will post answer keys
+
+# Goals
+
+- Quick R review
+    - You should all be experts by now!!
+- Understand loops, scoped verbs, and nesting
+- R in 811 will have more of a focus on working with datasets and less of an emphasis on probability
+
+# What are loops?
+
+- I've seen your PS812 homework assignments and they have loops
+- Does anyone want to walk us through a loop from an 812 assignment?
+
+# What are scoped verbs?
+
+- `if`: apply functions to variables that fulfills certain conditions (i.e., appy this function if this is true)
+- `at`: apply functions to specific variables (i.e., apply this function at this variable)
+- `all`: apply functions to every variable (i.e., apply this function at all variables)
+
+# What is nesting?
+
+- Nesting is when columns are a list of data frames
+- Groups of data frames accessible through a "nest"
