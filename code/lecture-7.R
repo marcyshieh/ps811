@@ -7,8 +7,8 @@ library("tidyr")
 library("dplyr")
 
 # setup folders and directories
-here("_ps811", "data")
-here("_ps811", "code")
+here("data")
+here("code")
 
 # read stata data in R
 scotus <- read_dta(here("_ps811", "data", "SCDB_2020_01_justiceCentered_Citation.dta"))
