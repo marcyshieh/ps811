@@ -63,10 +63,9 @@ barplot(table(coups_power$success, coups_power$year))
 
 ## Line plots
 plot(coups_power$year, coups_power$success, type = "l", lty = 1)
-lines(x, y, type = "l", lty = 1)
 
 ## Histogram and density plots
-hist(x, breaks = "Sturges")
+hist(coups_power$success, breaks = "Sturges")
 
 ## ggplot2
 ## best tutorials:

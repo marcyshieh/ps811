@@ -35,20 +35,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
     Hint: You can use `sapply(dataset-name-here, class)`.
 
-6. Log the buddhism variables.
+4. Log the buddhism variables.
 
-6. Write a function that lists all the unique years with more than 300,000 Christians in total.
+5. Write a function that lists all the unique years with more than 300,000 Christians in total.
 
-7. Group by the code variable.
+6. Group by the code variable.
 
     Hint: Use nesting.
 
-8. Create a model column. You need to include a linear regression model that examines whether the proportion of Jews (judaism_percent) affect whether a country has dual religions.
+7. Create a model column. You need to include a linear regression model that examines whether the proportion of Jews (judaism_percent) affect whether a country has dual religions.
 
-9. Extract the coefficients into a new column
+8. Extract the coefficients into a new column
 
-10. Look at the coefficients.
+9. Look at the coefficients.
 
-11. Pull out the model column.
+10. Pull out the model column.
 
-12. Unnest the coefficients column.
+11. Unnest the coefficients column.
