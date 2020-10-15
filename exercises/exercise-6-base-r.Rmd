@@ -82,7 +82,7 @@ knitr::opts_chunk$set(echo = TRUE)
     * reaction_count
     * comment_count
 
-8. Summarize the mean and standard deviations in Question 7 with the mainstream variables.
+8. Summarize the mean and standard deviations in Question 7 with the "mainstream" values in the `category` variable.
 
 # Submit
 

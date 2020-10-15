@@ -1,5 +1,5 @@
 ---
-title: 'Exercise 6: Functions'
+title: 'Exercise 5: Functions'
 author: "Marcy Shieh"
 date: "9/24/2020"
 output: pdf_document
