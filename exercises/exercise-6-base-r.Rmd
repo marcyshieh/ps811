@@ -1,7 +1,7 @@
 ---
-title: 'Exercise 5: Base R vs. Tidyverse'
+title: 'Exercise 6: Base R vs. Tidyverse'
 author: "Marcy Shieh"
-date: "9/24/2020"
+date: "10/15/2020"
 output: pdf_document
 ---
 
