@@ -1,0 +1,156 @@
+---
+title: 'Exercise 5: Functions'
+author: "Marcy Shieh"
+date: "9/24/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(tidyverse)
+```
+
+# Prerequisites
+
+1. Open you `ps811-exercises` folder.
+
+2. Go to File > New File > R Script.
+
+3. Save file as `exercise-6-functions.R`.
+
+4. Load R packages installed in Lectures 5 and 6.
+
+```{r iv, eval = FALSE}
+library(tidyverse)
+library(here)
+```
+
+5. Download the [national.csv file from Kaggle](https://www.kaggle.com/umichigan/world-religions).
+
+6. Load the CSV file into your R environment.
+
+```{r vi}
+national <- read.csv(here("data/national.csv"))
+```
+
+7. View the CSV.
+
+# Loops
+
+1. Write a loop to find how many variables there are per observations.
+
+```{r q1}
+rows_loop <- numeric()
+
+for (i in 1:ncol(national)) {
+  rows_loop[i] <- length(national[i, ])
+}
+
+rows_loop
+```
+
+2. Find the mean number of Protestant Christians in each country (i.e., the state column) using `tapply()` in both base R and Tidyverse.
+
+```{r q2, eval = FALSE}
+# base R
+tapply(
+  X = national$christianity_protestant, 
+  INDEX = list(national$state), 
+  FUN = mean, 
+  na.rm = TRUE  
+)
+
+# tidyverse
+national %>%
+  group_by(state) %>%
+  summarize(
+    mean_christ= mean(christianity_protestant, na.rm = TRUE)
+  ) 
+
+```
+
+3. Check the column type for each variable that is just characters.
+
+    Hint: You can use `sapply(dataset-name-here, class)`.
+    
+```{r q3, eval = FALSE}
+sapply(national, is.character)
+```
+
+4. Log the `buddhism` variables.
+
+```{r q4, eval = FALSE}
+national %>%
+  mutate_at(
+    .vars = vars(starts_with("buddhism")),
+    .funs = function(x) log(x)
+  ) %>% 
+  select(starts_with("buddhism"))
+
+# answers referring to only the "buddhism_all" variable are also acceptable
+# I realize that this question is unclear (sorry!)
+```
+
+5. Write a function that lists all the unique years with more than 300,000 Christians in total.
+
+```{r q5}
+unique_chr300k_yr <- function(x) {
+    if(national$christianity_all > 300000) {
+return(unique(national$year))
+    }
+}
+
+unique_chr300k_yr()
+```
+
+6. Group by the code variable.
+
+    Hint: Use nesting.
+    
+```{r q6}
+nested_code <- national %>%
+  group_by(code) %>%
+  nest()
+```
+
+7. Create a model column. You need to include a linear regression model that examines whether the proportion of Jews (judaism_percent) affect whether a country has dual religions.
+
+```{r q7}
+nested_models <- nested_code %>%
+  mutate(
+    model = map(
+      .x = data, 
+      .f = ~ lm(dual_religion ~ judaism_percent, data = .x)
+    )
+  ) %>%
+  print()
+```
+
+8. Extract the coefficients into a new column
+
+```{r q8}
+nested_coefs <- nested_models %>%
+  mutate(coefs = map(model, coefficients)) %>%
+  print()
+```
+
+9. Look at the coefficients.
+
+```{r q9, eval = FALSE}
+nested_coefs$coefs
+```
+
+10. Pull out the model column.
+
+```{r q10, eval = FALSE}
+nested_coefs %>% pull(model)
+```
+
+11. Unnest the coefficients column.
+
+```{r q11}
+coefs <- nested_coefs %>%
+  unnest(coefs) %>%
+  print()
+```
