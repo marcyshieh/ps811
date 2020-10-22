@@ -53,6 +53,21 @@ knitr::opts_chunk$set(echo = TRUE)
     
 9. Summarize GPA and weight within the gender and cuisine variables.
 
+```{r}
+food <- read.csv("/Users/marcyshieh/Downloads/archive/food_coded.csv")
+
+food$GPA <- as.numeric(food$GPA)
+food$weight <- as.numeric(food$weight)
+food$Gender <- as.factor(food$Gender)
+food$cuisine <- as.factor(food$cuisine)
+
+aggregate(formula = cbind(GPA, weight) ~ Gender + cuisine, 
+          data = food, 
+          FUN = function(x){
+            c(mean = mean(x), sd = sd(x))
+          })
+```
+
 # Tidyverse tasks
 
 1. Download the [facebook-fact-check.csv file from Kaggle](https://www.kaggle.com/mrisdal/fact-checking-facebook-politics-pages?select=facebook-fact-check.csv).

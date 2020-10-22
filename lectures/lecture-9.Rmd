@@ -1,0 +1,50 @@
+---
+title: "Lecture 8. Analysis"
+author: Marcy Shieh
+date: November 5, 2020
+output: beamer_presentation
+---
+
+# Goals
+
+- Learn how to fit a regression
+
+# Regressions
+
+- Regressions help you estimate the relationship between a dependent and independent variable
+
+- There are different types of regressions
+
+# Regressions common in political science
+
+- Linear regression
+
+- Logistic regression
+
+- There are also other regressions, but those are the two regressions that are widely used...
+
+# Linear regression
+
+- Use when the outcome is continuous
+
+# Logistic regression
+
+- Use when the outcome is binary
+
+# Is it really that simple?
+
+No...
+
+# Here are other things you should think about...
+
+- Play around with your data! Get to know your data! Summarize your data, explore your data, etc.
+
+- Analyze different metrics to evaluate the goodness of fit
+
+- Cross-validation: a small difference between the observed and predicted values suggest prediction accuracy
+
+- You may use automated model selection procedures but be careful when if you have a bunch of control variables where you might not want to put them all in the same model
+
+- Consider what is possible, what your resources are, etc. If it's resource-intensive to use a certain regression, you may want to weigh your options
+
+- Regression regularization methods are useful for data with high dimensionality (features exceed observations) and multcollinearity (variables are highly related)

@@ -1,0 +1,57 @@
+---
+title: 'Exercise 9: Analysis'
+author: "Marcy Shieh"
+date: "11/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Review
+
+1. Download the .Rmd version of this file from GitHub and change the author to your name.
+
+2. Load packages.
+
+```{r packages, include = FALSE}
+library("here")
+library("haven")
+library("Rmisc")
+library("magrittr")
+library("tidyverse")
+library("ggplot2")
+library("broom")
+library("MASS")
+library("estimatr")
+library("modelsummary")
+```
+
+3. Set up your files and folder structure.
+
+4. Read the ANES .dta data into R using the `here` package.
+
+5. Download the ANES 2016 codebook (available on the `ps811/data` repository). We will look at the full sample variables.
+
+6. You want to know whether owning a house (pre-election) affects which party the respondent choose to contribute to (post-election). Identify these variables from the codebook and rename the variables to names that are easier to reference.
+
+7. Now identify pre-election demographic variables, such as age, gender, and race. Manipulate these variables in ways that you believe would best capture these demographics and explain why you manipulated these variables that way you did. Rename these variables to names that are easier to reference.
+
+8. Provide descriptive summaries for each variable.
+
+9. Run an appropriate regression analysis and insert the table into the R Markdown document.
+
+10. Create a coefficient plot based on the above table.
+
+# Your project
+
+Now it's your turn. Use the tools you used today to conduct data analysis for one of your final seminar papers.
+
+1. Create a descriptive statistics summary table for your main variables of interest. Note the number of observations.
+
+2. If you are planning to run a regression, please write out the regression formula. Please take into consideration the dependent variable and its distribution. If you already have the data, you may go ahead and run it. If you do not have the data and is in the process of collecting it, write out the formula. Pre-analysis plans are becoming more common in the discipline, so being able to record what you *plan* to do is becoming increasingly more important.
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.

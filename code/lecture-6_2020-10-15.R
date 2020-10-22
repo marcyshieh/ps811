@@ -19,7 +19,8 @@ movie_metadata_100 <- movie_metadata[1:100, ]
 
 # look at existing variables in the dataset
 # you can identify the variables by name
-movie_metadata_100[, c("director_name", "movie_title")] 
+directors100 <- movie_metadata_100[, c("director_name", "movie_title")] 
+View(directors100)
 
 # or you can identify the variables by their column index/number
 movie_metadata_100[, c(2, 12)]
@@ -34,8 +35,10 @@ movie_metadata_100$main_actors_fb_popularity <-
 View(movie_metadata_100)
 
 # you want to extract the observations where there is a IMDB score of 5+ and 2 number of faces in the poster
-subset(movie_metadata_100, imdb_score > 5 &
+subset_score_poster <- subset(movie_metadata_100, imdb_score > 5 &
          facenumber_in_poster==2)
+
+View(subset_score_poster)
 
 # descending order of movie title followed by ascending order of budget
 movie_metadata_100[order(rev(movie_metadata_100$movie_title),
@@ -60,25 +63,32 @@ aggregate(formula = cbind(budget, gross) ~ country + genres,
 
 # tidyverse
 
+library(tidyverse)
+
 movie_metadata_100tidy <- movie_metadata %>%
   top_n(100)
 
+View(subset_score_poster)
+
 
 # you can identify the variables by name
-select(movie_metadata_100tidy, director_name, movie_title)
+dplyr::select(movie_metadata_100tidy, director_name, movie_title)
 
 # or you can identify the variables by their column index/number
 select(movie_metadata_100tidy, 2, 12)
 
 # you want to get the sum of facebook likes for the first 3 actors listed in the movie
 
-movie_metadata_100tidy <- mutate(movie_metadata_100tidy,
-                                 main_actors_fb_popularity = actor_1_facebook_likes +
-                                   actor_2_facebook_likes + actor_3_facebook_likes)
+movie_metadata_100tidy <-
+  mutate(movie_metadata_100tidy,
+        main_actors_fb_popularity =
+          actor_1_facebook_likes +
+          actor_2_facebook_likes +
+          actor_3_facebook_likes)
 
 
 # you want to extract the observations where there is a IMDB score of 5+ and 2 number of faces in the poster
-filter(movie_metadata_100tidy, imdb_score > 5 & facenumber_in_poster==2)
+dplyr::filter(movie_metadata_100tidy, imdb_score > 5 & facenumber_in_poster==2)
 
 # descending order of movie title followed by ascending order of budget
 arrange(movie_metadata_100tidy, desc(movie_title), budget) 

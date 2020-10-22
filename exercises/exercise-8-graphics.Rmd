@@ -1,0 +1,44 @@
+---
+title: 'Exercise 8: Graphics'
+author: "Marcy Shieh"
+date: "10/22/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Create the following graphs in both base R and `ggplot2`.
+
+1. Check out the base R built-in dataset, `data("USArrests")`.
+
+2. Create a scatterplot that looks at the correlation between murder and assault arrests. Label the x and y axes and title the graph.
+
+3. Create a boxplot of rape arrests. Label the plot.
+
+4. Create a barplot of the number of rape arrests per state.
+
+5. Create a histogram for the percent of urban population.
+
+# Your project
+
+Now it's your turn. Use the `ggplot2` tools you used today to conduct data analysis for one of your final seminar papers.
+
+1. Create a Git repository for your project.
+
+2. Upload the dataset you are planning to use. If are you planning to collect original data, please provide all the variables that will be in that original dataseet.
+
+3. How will these variables help answer your question?
+
+4. Consider the variables. Which variables would you want to highlight? How would you visually represent them? Plan to create at least three descriptive graphs. Some suggestions:
+
+    + If you have time-related variable, create a line graph showing changes over time!
+    
+    + If your observations can be separated by certain groups, create bar graphs or facets~
+
+5. Given what you brainstormed in Question 4, create plots using the `ggplot2` package. Label all axes and title each graph. Provide descriptions for each graph.
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.

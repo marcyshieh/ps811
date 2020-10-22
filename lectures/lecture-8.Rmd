@@ -1,0 +1,51 @@
+---
+title: "Lecture 8. Graphics"
+author: Marcy Shieh
+date: October 29, 2020
+output: beamer_presentation
+---
+
+# Goals
+
+- Learn how to create quick graphs
+- Learn how to create pretty graphs
+
+# Why graphs?
+
+- Graphs help you and your readers visualize your data
+- Use graphs for your presentations
+    - I tend to break this rule a lot because I'm terrible and like regression tables
+    - But in general, people like it when you use graphs
+- Use graphs for your papers
+    - Put the table in the appendix!
+    
+# base R graphs
+
+- These are kinda ugly (no offense)
+- But they are useful when you just need to...see something...as a graph
+- Think of base R graphs as a sketchpad. You can use it to draft something but do not use it as your final version (IMO).
+
+# base R graph example
+
+```{r base-R, echo = FALSE}
+mtcars$cyl <- as.factor(mtcars$cyl)
+plot(mpg ~ hp , data=mtcars, 
+    col=cyl, pch=c(4,6,8)[mtcars$cyl], cex=1.2)
+legend("topright", legend=levels(mtcars$cyl),
+                   pch = c(4,6,8),
+                   col=levels(mtcars$cyl))
+```
+
+# `ggplot2` graphs
+
+- `ggplot2` graphs are prettier
+- Package has more themes and allows you to customize your graphs in a billion different ways
+- And unlike base R graphs, `ggplot2` graphs look like they were made in the 21st century
+
+# `ggplot2` graph example
+
+```{r ggplot2, echo = FALSE}
+library(ggplot2)
+ggplot(mtcars, aes(x=hp, y=mpg, color=cyl, shape=cyl)) +
+    geom_point(size=3)
+```

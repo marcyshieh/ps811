@@ -355,7 +355,7 @@ scotus_df_example <- select(scotus, term, issueArea, decisionDirection)
 head(scotus_df_example)
 scotus_df_example <- as.data.frame(scotus_df_example)
 
-# reshape data
+# reshape data (transpose data-ish)
 scotus_df_example <- select(scotus, term, liberal, conservative)
 scotus_df_example <- filter(scotus_df_example, term %in% c(2017, 2018, 2019))
 

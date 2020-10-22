@@ -124,6 +124,8 @@ anes2016 <-
     post.vote.binary = ifelse(post.vote == 1, 1, 0))
 # now it is 1 = voted, 0 = did not vote
 
+hist(anes2016$post.vote.binary)
+
 anes2016 <-
   anes2016 %>%
   mutate(
