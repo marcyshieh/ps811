@@ -11,7 +11,7 @@ here("data")
 here("code")
 
 # read stata data in R
-scotus <- read_dta(here("_ps811", "data", "SCDB_2020_01_justiceCentered_Citation.dta"))
+scotus <- read_dta(here("data", "SCDB_2020_01_justiceCentered_Citation.dta"))
 
 # how does my data LOOK??
 scotus
@@ -62,7 +62,7 @@ streaming <- data_frame(streaming, approve, disapprove, difference)
 streaming
 
 # this is a tibble
-streaming_df <- as.data.frame(streaming_dataframe)
+streaming_df <- as.data.frame(streaming)
 
 #####
 
@@ -94,7 +94,9 @@ scotus$justice
 #        new_name = old_name,
 #        new_name2 = old_name2)
 
-anes <- rename(scotus, 
+names(scotus_copy)
+
+scotus <- rename(scotus, 
                case.id = caseId,
                docket.id = docketId, 
                case.issues.id = caseIssuesId, 
@@ -139,11 +141,14 @@ scotus <-
                                1,
                                0))
 
+names(scotus)
 # maybe you want to do create a variable that identifies the decision dates by decade
 # here's your chance to work with date values, which many of you will have to deal with
 
 # take a look at the variable
 summary(scotus$year)
+
+View(scotus$dateDecision)
 
 # turn the dateDecision variable into a date variable with the date structure you see in the summary() results
 # extract the year and put it in a variable called year
@@ -190,6 +195,11 @@ scotus <- mutate(scotus,
                  decisionDirection == 2 ~ liberal,
                  decisionDirection == 3 ~ unspecified))
 
+# difference between case_when and ifelse()
+
+# ifelse: you can do if == 1, then yes, if =/= 1, then no
+# case_when: you can do if == 1, then yes
+
 # factors and strings -- write about this in r markdown
 
 # select columns
@@ -204,17 +214,21 @@ select(scotus, decade, liberal)
 # turn it into an object so you can work with it later
 scotus_select <- select(scotus, decade, liberal)
 
+View(scotus_select)
+
 # say you only want caseId and all background variables (consecutively ordered)
-select(scotus, caseId, caseName:lcDispositionDirection)
+select(scotus, case.id, caseName:lcDispositionDirection)
 
 # select caseid and any variable that contains "case" in the name
-select(scotus, caseId, contains("case"))
+select(scotus, case.id, contains("case"))
+
+names(select(scotus, case.id, contains("case")))
 
 # drop "docketId" variable and keep all other variables
-select(scotus, -docketId)
+select(scotus, -docket.id)
 
 # more specifically, you can do:
-select(scotus, -docketId, matches("."))
+select(scotus, -docket.id, matches("."))
 # matches(".") keeps all remaining variables
 # though not having also keeps all remaining variables
 
@@ -236,6 +250,7 @@ filter(scotus, year == 2000, justiceName == "RBGinsburg")
 # summarize
 
 # think of this as a more advanced summary() command
+summary(scotus)
 scotus %>%
   summarise(mean = mean(liberal, na.rm = TRUE), n = n())
 
@@ -279,7 +294,8 @@ english <- data_frame(studentID = c(990055, 889765, 189245, 346789, 534098, 1329
 
 math <- data_frame(studentID = c(990055, 889765, 189245, 346789, 534098, 345890), 
                    grade = c(80, 90, 50, 85, 95, 66))
-
+english
+math
 # in base R
 # english grade is "grade.x" and math grade is "grade.y"
 merge(english, math, by="studentID")
@@ -329,7 +345,7 @@ scotus_cross_example <- table(scotus$decade, scotus$decisionDirection)
 scotus_cross_prop_example_row <- prop.table(scotus_cross_example, margin = 1)
 
 # say i want to know (liberal decision in 1940s)/(all decisions in the 1940s)
-scotus_cross_prop_example_col <- prop.table(tab, margin = 2)
+scotus_cross_prop_example_col <- prop.table(scotus_cross_example, margin = 2)
 
 # say you want to count the number of cases per decade per decision type
 # and you want it in a dataframe
