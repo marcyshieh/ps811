@@ -1,0 +1,247 @@
+---
+title: 'Exercise 6: Base R vs. Tidyverse (Answer Key)'
+author: "Marcy Shieh"
+date: "10/15/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Prerequisites
+
+1. Open you `ps811-exercises` folder.
+
+2. Go to File > New File > R Script.
+
+3. Save file as `exercise-5-code.R`.
+
+4. Load R packages installed in Lecture 5.
+
+```{r, include = FALSE}
+# load packages
+library("here")
+library("tidyverse")
+library("tidyr")
+library("dplyr")
+library("purrr")
+```
+
+# Base R tasks
+
+1. Download the [food_coded.csv file from Kaggle](https://www.kaggle.com/borapajo/food-choices?select=food_coded.csv).
+
+2. Load the CSV file into your R environment.
+
+    Open the `codebook_food.docx` file for guidance.
+  
+```{r}
+food <- read.csv(here("data", "food_coded.csv"))
+```
+
+3. Extract the first 95 rows.
+
+```{r}
+food_95 <- food[1:95, ]
+```
+
+4. Look at the following variables using both name and column index/number.
+
+    * GPA
+    * calories_chicken
+    * drink
+    * fav_cuisine
+    * father_profession
+    * mother_profession
+    
+```{r, eval = FALSE}
+# name
+food_95[ , c("GPA", "calories_chicken", "drink", "fav_cuisine", "father_profession", "mother_profession")]
+
+# index number
+food_95[ , c(1,4,16,26,25,45)]
+```
+
+5. Create a new variable for how healthy each person feels but convert the scale from 1 to 10 to 1 to 100.
+
+```{r}
+food_95$healthy_feeling_100 <- food_95$healthy_feeling * 10
+```
+
+6. Filter to students who are female and have GPAs that are above 3.0.
+
+```{r, eval = FALSE}
+subset(food_95, Gender == 1 & GPA > 3.0)
+```
+
+7. Arrange their favorite cuisine in alphabetical order.
+
+```{r, eval = FALSE}
+food_95[order(food_95$fav_cuisine), ]
+```
+
+8. Find the mean and standard deviation for the following variables, and summarize them in a data frame.
+
+    * chicken_calories
+    * tortilla_calories
+    * turkey_calories
+    * waffle_calories
+    
+```{r}
+data.frame(chicken_calories.mean = mean(food_95$calories_chicken, na.rm = TRUE),
+           chicken_calories.sd = sd(food_95$calories_chicken, na.rm = TRUE),
+           tortilla_calories.mean = mean(food_95$tortilla_calories, na.rm = TRUE),
+           tortilla_calories.sd = sd(food_95$tortilla_calories, na.rm = TRUE),
+           turkey_calories.mean = mean(food_95$turkey_calories, na.rm = TRUE),
+           turkey_calories.sd = sd(food_95$turkey_calories, na.rm = TRUE),
+           waffle_calories.mean = mean(food_95$waffle_calories, na.rm = TRUE),
+           waffle_calories.sd = sd(food_95$waffle_calories, na.rm = TRUE))
+```
+
+9. Summarize GPA and weight within the gender and cuisine variables.
+
+```{r}
+# you need to turn the variables into numeric variables
+food_95$GPA <- as.numeric(food_95$GPA)
+food_95$weight <- as.numeric(food_95$weight)
+food_95$Gender <- as.factor(food_95$Gender)
+food_95$cuisine <- as.factor(food_95$cuisine)
+
+# you want to summarize the GPA and weight variables (so you put it on the outside of the formula)
+# grouped by gender and cuisine
+aggregate(formula = cbind(Gender, cuisine) ~ GPA + weight, 
+          data = food_95, 
+          FUN = function(x){
+            c(mean = mean(x), sd = sd(x))
+          })
+
+# in the table, the NA variables in the standard deviation columns mean that
+# the summary has only aggregated one value, ergo...no standard deviation
+```
+
+# Tidyverse tasks
+
+1. Download the [facebook-fact-check.csv file from Kaggle](https://www.kaggle.com/mrisdal/fact-checking-facebook-politics-pages?select=facebook-fact-check.csv).
+
+2. Load the CSV file into your R environment.
+
+```{r}
+facebook <- read.csv(here("data", "facebook-fact-check.csv"))
+```
+
+3. Extract the last 500 rows.
+
+    Hint: Check out the [top_n() page](https://rdrr.io/github/YTLogos/dplyr/man/top_n.html) to figure out how to extract the lasst 500 rows instead of the firsst 500 rows.
+    
+```{r}
+facebook_500tidy <- facebook %>%
+  top_n(-500)
+```
+    
+4. Look at the even-numbered column indices only. Identify them by name.
+
+```{r, eval = FALSE}
+select(facebook_500tidy, 2, 4, 6, 8, 10, 12)
+# post_id, Page, Date.Published, Rating, share_count, comment_count
+
+# with names:
+select(facebook_500tidy, post_id, Page, Date.Published, Rating, share_count, comment_count)
+```
+
+5. Using `mutate`, create a new variable called `post_type_coded` that renames each post type to the following:
+
+    * link = 1
+    * photo = 2
+    * text = 3
+    * video = 4
+    
+    Hint: You want to make sure that these text categories are *equal* to these numeric values.
+    
+```{r}
+# this introduces the case_when command, which I did not cover (sorry!)...
+# but could have been uncovered via googling...
+
+# there is probably an easier way but I think this is easier to visualize
+# essentially, you are saying setting it up as:
+# if the value in Post.Type is "link"
+# you want it as post_type_coded == 1; if not, you want it to be post_type_coded == 0
+# and, if the value in Post.Type if "photo"
+# you want it you want it as post_type_coded == 2; if not, you want it to be whatever value that is already in post_type_coded...
+# and you keep building :)
+
+facebook_500tidy <-
+  mutate(facebook_500tidy,
+         post_type_coded = ifelse(
+           Post.Type == "link", 1, 0),
+         post_type_coded = ifelse(
+           Post.Type == "photo", 2, post_type_coded),
+         post_type_coded = ifelse(
+           Post.Type == "text", 3, post_type_coded),
+         post_type_coded = ifelse(
+           Post.Type == "video", 4, post_type_coded))
+
+# a more elegant way:
+facebook_500tidy <- 
+  mutate(facebook_500tidy,
+         post_type_coded = 
+           ifelse(Post.Type == "link", 1,
+           ifelse(Post.Type == "photo", 2,
+           ifelse(Post.Type == "text", 3,
+                  4))))
+```
+    
+6. Arrange page names in reverse order.
+
+```{r, eval = FALSE}
+arrange(facebook_500tidy, desc(Page))
+```
+    
+7. Find the mean and standard deviation for the following variables, and summarize them.
+
+    * share_count
+    * reaction_count
+    * comment_count
+    
+```{r}
+summarise(facebook_500tidy,
+          share_count.mean = mean(share_count, na.rm = TRUE),
+          share_count.sd = sd(share_count, na.rm = TRUE),
+          reaction_count.mean = mean(reaction_count, na.rm = TRUE),
+          reaction_count.sd = sd(reaction_count, na.rm = TRUE),
+          comment_count.mean = mean(comment_count, na.rm = TRUE),
+          comment_count.sd = sd(comment_count, na.rm = TRUE))
+```
+
+8. Summarize the mean and standard deviations in Question 7 with the "mainstream" values in the `category` variable.
+
+```{r}
+# this shows all the values
+
+facebook_500tidy %>% 
+  group_by(Category) %>% 
+  summarise(share_count.mean = mean(share_count, na.rm = TRUE),
+            share_count.sd = sd(share_count, na.rm = TRUE),
+            reaction_count.mean = mean(reaction_count, na.rm = TRUE),
+            reaction_count.sd = sd(reaction_count, na.rm = TRUE),
+            comment_count.mean = mean(comment_count, na.rm = TRUE),
+            comment_count.sd = sd(comment_count, na.rm = TRUE)) %>% 
+  ungroup()
+
+# but you may want to look at ONLY mainstream values in the category variable...
+# if you had more than 3 levels in the category variable, this might be helpful in identifying the one value you're interested in...
+
+facebook_500tidy %>% 
+  group_by(Category == "mainstream") %>% 
+  summarise(share_count.mean = mean(share_count, na.rm = TRUE),
+            share_count.sd = sd(share_count, na.rm = TRUE),
+            reaction_count.mean = mean(reaction_count, na.rm = TRUE),
+            reaction_count.sd = sd(reaction_count, na.rm = TRUE),
+            comment_count.mean = mean(comment_count, na.rm = TRUE),
+            comment_count.sd = sd(comment_count, na.rm = TRUE)) %>% 
+  ungroup()
+```
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.
