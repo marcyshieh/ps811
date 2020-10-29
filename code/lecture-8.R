@@ -145,7 +145,7 @@ gg <- ggplot(power_cow, aes(x = milper, y = milex)) +
   geom_point(aes(col=factor(year)), size=3) + 
   # Set color to vary based on state categories.
   geom_smooth(method="lm", col="firebrick", size=2) +
-  labs(title="Military Personnel and Expenditures", subtitle="From power COW dataset", y="Expenditures", x="Personnel", caption="Military")
+  labs(title="Military Personnel and Expenditures", subtitle="From power COW dataset", y="Expenditures", x="Personnel", caption="Military") + theme(legend.position = "none") 
 gg
 
 # ahhh there are TOO MANY YEARS...graph is hard to read
@@ -157,10 +157,11 @@ power_cow2
 
 gg2 <- ggplot(power_cow2, aes(x = milper, y = milex)) + 
   geom_point(aes(col=factor(year)), size=3) +  # Set color to vary based on state categories.
+  # if you don't want to show the confidence intervals shadow, then do se = FALSE
   geom_smooth(method="lm", col="firebrick", size=2) +
   labs(title="Military Personnel and Expenditures", subtitle="From power COW dataset", y="Expenditures", x="Personnel", caption="Military")
-plot(gg2)
-# OR just g2 works too :)
+gg2
+# OR just gg2 works too :)
 
 # change color schemes
 library(RColorBrewer)
