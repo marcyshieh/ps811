@@ -145,7 +145,7 @@ gg <- ggplot(power_cow, aes(x = milper, y = milex)) +
   geom_point(aes(col=factor(year)), size=3) + 
   # Set color to vary based on state categories.
   geom_smooth(method="lm", col="firebrick", size=2) +
-  labs(title="Military Personnel and Expenditures", subtitle="From power COW dataset", y="Expenditures", x="Personnel", caption="Military") + theme(legend.position = "none") 
+  labs(title="Military Personnel and Expenditures", subtitle="From power COW dataset", y="Expenditures", x="Personnel", caption="Military") # if you want to hide the legend + theme(legend.position = "none") 
 gg
 
 # ahhh there are TOO MANY YEARS...graph is hard to read
