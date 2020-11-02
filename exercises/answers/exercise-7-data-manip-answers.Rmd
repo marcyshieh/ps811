@@ -13,6 +13,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Please submit the exercise as a R file and upload it to your `ps-exercises` Git repository.
 
+```{r}
+# load packages
+library(dplyr)
+library(here)
+library(tidyverse)
+library(haven)
+
+# folder locations
+here()
+here("data")
+```
+
 1. Create a dataframe in R based on the table below.
 
 | Justice             	| State 	| Position          	| Replacing           	| Year confirmed 	| Senate confirmation vote 	| Nominated by     	|
@@ -28,7 +40,49 @@ Please submit the exercise as a R file and upload it to your `ps-exercises` Git 
 | Brett Kavanaugh     	| MD    	| Associate Justice 	| Anthony Kennedy     	| 2018           	| 50-48                    	| Donald Trump     	|
 
 
+```{r}
+Justice <- c("Clarence Thomas", "Ruth Bader Ginsburg",
+             "Stephen Breyer", "John Robers", "Samuel Alito",
+             "Sonia Sotomayor", "Elena Kagan", "Neil Gorsuch",
+             "Brett Kavanaugh")
+
+State <- c("GA","NY","MA","MD","NJ","NY","MA","CO","MD")
+
+Position <- c("Associate Justice", "Associate Justice",
+              "Associate Justice", "Chief Justice",
+              "Associate Justice","Associate Justice",
+              "Associate Justice","Associate Justice",
+              "Associate Justice")
+
+Replacing <- c("Thurgood Marshall", "Byron White",
+               "Harry Blackmun", "William Rehnquist",
+               "Sandra Day O'Connor", "David Souter",
+               "John Paul Stevens", "Antonin Scalia",
+               "Anthony Kennedy")
+
+Year <- c(1991, 1993, 1994, 2005, 2006, 2009, 2010, 2017, 2018)
+
+`Senate Confirmation Vote` <- c("52-48", "96-3", "87-9", "78-22",
+                                "58-42", "68-31", "63-37",
+                                "54-45", "50-48")
+
+`Nominated by` <- c("George H.W. Bush", "Bill Clinton", 
+                  "Bill Clinton", "George W. Bush",
+                  "George W. Bush", "Barack Obama",
+                  "Barack Obama", "Donald Trump", 
+                  "Donald Trump")
+
+SCJustices <- data.frame(Justice, State, Position, Replacing,
+                         Year, `Senate Confirmation Vote`,
+                         `Nominated by`)
+SCJustices
+```
+
 2. Download `justices.csv` from the `ps811` GitHub repository. The `justices.csv` file contains [Martin-Quinn scores](https://mqscores.lsa.umich.edu/) (a measure of ideology) for justices from 1937 to 2019.
+
+```{r}
+justices <- read.csv(here("data", "justices.csv"))
+```
 
 For the data manipulation questions below, use pipes (`%>%`).
 
@@ -37,16 +91,70 @@ For the data manipulation questions below, use pipes (`%>%`).
     + If the names are different, you will need to rename the variable names for one of the datasets so you can merge the two datasets. Make sure the values in the variable names that you would like to merge are formatted the same way.
 
     + For example, if you want to merge every Roberts vote with his Martin-Quinn score in that particular term, you will need to make sure that both datasets format Roberts' name correctly. An easy way to do this is to put the justice variable in a `table()`.
+    
+```{r}
+# load justice votes data
+scotus <- read_dta(here("data", "SCDB_2020_01_justiceCentered_Citation.dta"))
+
+# check variable names to see if they can be merged
+names(scotus)
+names(justices)
+
+# check values
+joined_justices <- full_join(scotus, justices, by=c("justiceName", "term"))
+# check for repeats
+table(joined_justices$justiceName)
+```
 
 4. Filter to justices with Martin-Quinn scores.
+```{r}
+joined_justices_MQ <- filter(joined_justices, !is.na(post_mn))
+```
 
 5. Find the mean Martin-Quinn score for each term in your dataset.
+
+```{r}
+MQ_by_term <- joined_justices_MQ %>%
+  group_by(term) %>%
+  summarise(mean = mean(post_mn, na.rm = TRUE))
+
+print(MQ_by_term, n = nrow(MQ_by_term))
+```
 
 6. Find the mean decision direction for each term in your dataset. Rescale the decision direction variable so it is analagous to the Martin-Quinn score.
 
     + Hint: the SCOTUS database decision direction scores are currently 1 (conservative), 2 (liberal), 3 (unspecified). You want to change it to -1 (liberal), 0 (unspecified), and 1 (conservative).
+    
+```{r}
+joined_justices_MQ <- mutate(joined_justices_MQ,
+                          decisionDirection = case_when(
+                            decisionDirection == 1 ~ 1,
+                            decisionDirection == 2 ~ -1, 
+                            decisionDirection == 3 ~ 0))
+
+
+decision_by_term <- joined_justices_MQ %>%
+  group_by(term) %>%
+  summarise(mean = mean(decisionDirection, na.rm = TRUE))
+
+print(decision_by_term, n = nrow(decision_by_term))
+```
 
 7. Compare the mean Martin-Quinn scores and vote directions. Are they similar or are they different?
+
+```{r}
+mq_decision_compare <- inner_join(MQ_by_term, decision_by_term,
+                                  by="term")
+
+
+mq_decision_compare_diff <- mq_decision_compare %>%
+  group_by(term) %>%
+  summarise(difference = mean.y - mean.x)
+
+# average difference is small...you can see this from looking at the mean or from a plot
+mean(mq_decision_compare_diff$difference, na.rm = TRUE)
+plot(mq_decision_compare_diff$term, mq_decision_compare_diff$difference)
+```
     
 # Brainstorm final project
 
