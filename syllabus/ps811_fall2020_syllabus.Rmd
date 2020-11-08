@@ -170,28 +170,29 @@ Do you what you already do but with cool computing tools - part i: create a proj
 ### September 24 - Bibliography
 Do you what you already do but with cool computing tools - part ii: create a bibliography
 
-### October 8 - Git Branch
+### October 1 - Git Branch
 How to create "branches" in Git so you and your team can work on multiple versions of the same project before merging it back to the most up-to-date version.
 
-### October 15 - Base R vs. Tidyverse
+### October 8 - Base R vs. Tidyverse
 Base R vs. Tidyverse, and how to be comfortable with both.
 
-### October 22 - Functions
+### October 15 - Functions
 Some useful functions for your own work and PS 812.
 
-### October 29
+### October 22
 Manipulate data.
 
-### November 5 
+### October 29 
 Create graphics.
 
-### November 12
+### November 5
 Regression and model outputs.
 
-### November 19
-Useful R Packages and Computing Tools
+### November 12
+Manipulate general data and time series data (continued).
 
-Suggestions welcome! Let me know if there are quantitative/qualitative tools that you think will be helpful for your research and I will do my best to make a recommendation.
+### November 19
+Useful R Packages and Computing Tools - Qualtrics, and quanteda and rtweets R packages.
 
 ### November 26
 Thanksgiving Day - No class!
