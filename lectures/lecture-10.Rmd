@@ -1,0 +1,22 @@
+---
+title: "Lecture 10. Data Manipulation with Replication"
+author: Marcy Shieh
+date: November 12, 2020
+output: beamer_presentation
+---
+
+# Goals
+
+- For me to share my replication project that I was very proud of at the time
+
+- For you to witness an application of the replication workflow in action and get some practice manipulating more data
+
+- Hopefully this is helpful for both your 812 replication project and seminar papers
+
+# A note on replications
+
+- Even the most often-cited articles have errors
+
+- Errors only matter if they change the findings
+
+# 

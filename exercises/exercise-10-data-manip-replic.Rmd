@@ -9,6 +9,8 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Extend the dataset
+
 Extend the exercise we did in class up to the Senate confirmation of Associate Justice Sonia Sotomayor, following the instructions in the `lecture-10.R` file.
 
 Links to the datasets required to complete this exercise:
@@ -20,6 +22,24 @@ Links to the datasets required to complete this exercise:
 - 111th Congress roll call votes and dictionary: https://legacy.voteview.com/senate111.htm
 
 - Segal-Cover scores: https://en.wikipedia.org/wiki/Segal%E2%80%93Cover_score
+
+# Replication
+
+Find replication materials for a paper and replicate a table within the paper.
+
+    - There are many political science papers with data stored in the Stata (`.dta`) file  format accompanied by a Stata file (`.do`) file. In those cases, you will need to read the Stata file into R using the `haven` package and recreate your table of choice using R code. In other words, please do not turn in Stata code!
+    
+    - If you do find replication materials in R and would like to run the entire R script, please feel free to do so! Reviewing other people's replication materials is the best way to learn how scholars assemble their results.
+
+Here are some great resources for finding articles with reproducible data.
+
+- Political Science Replication (https://politicalsciencereplication.wordpress.com/)
+
+- Harvard Dataverse (https://dataverse.harvard.edu/dataverse/harvard?q=&fq0=subject_ss%3A%22Social%20Sciences%22&types=dataverses%3Adatasets&sort=dateSort&order=desc)
+
+- Recent articles from *Political Science Research and Methods*, *American Journal of Political Science*, *American Political Science Review*, and *Political Analysis*
+
+    - You can access articles in the top journals by signing into the UW-Madison Library website (https://library.wisc.edu) with your UW netID
 
 # Submit
 
