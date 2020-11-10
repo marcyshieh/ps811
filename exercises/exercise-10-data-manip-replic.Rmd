@@ -1,0 +1,26 @@
+---
+title: 'Exercise 10: Data Manipulation with Replication Example'
+author: "Marcy Shieh"
+date: "11/12/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Extend the exercise we did in class up to the Senate confirmation of Associate Justice Sonia Sotomayor, following the instructions in the `lecture-10.R` file.
+
+Links to the datasets required to complete this exercise:
+
+- Harvard Dataverse entry for the Epstein et al. (2006) article (includes PDF of article for reference): https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/W5CV8E&version=1.0
+
+- Poole & Rosenthal scores from 2016: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/W5CV8E&version=1.0
+
+- 111th Congress roll call votes and dictionary: https://legacy.voteview.com/senate111.htm
+
+- Segal-Cover scores: https://en.wikipedia.org/wiki/Segal%E2%80%93Cover_score
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your `ps811-exercises` repository when you are done.
