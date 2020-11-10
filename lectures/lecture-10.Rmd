@@ -19,4 +19,4 @@ output: beamer_presentation
 
 - Errors only matter if they change the findings
 
-# 
+- I wish all seminar courses are all about replication
