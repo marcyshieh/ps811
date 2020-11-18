@@ -69,7 +69,7 @@ anes2016 <- mutate(anes2016,
                      homeowner == 3 ~ 1)) # homeowner (no payments due)
 
 # recode party that respondent donated (in post-election survey)
-anes2016$party_donate <- anes2016$V162014a
+anes2016$party_donate <- anes2016$V162016a
 
 anes2016 <- mutate(anes2016,
                      party_donate = case_when(
