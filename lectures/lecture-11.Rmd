@@ -1,0 +1,22 @@
+---
+title: "Lecture 11. Text Analysis"
+author: Marcy Shieh
+date: November 19, 2020
+output: beamer_presentation
+---
+
+# Goals
+
+- Understand text analysis on a very high level
+
+# Disclaimer
+
+- Text can be messy & complicated
+
+# How is text analysis useful?
+
+- You can code passages by tone
+
+- You can code passages by topic
+
+- Useful for both qualitative & quantitative scholars
