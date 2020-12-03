@@ -13,11 +13,11 @@ output: beamer_presentation
 
 # Logistics
 
-- Please submit Exercise 11 ASAP!!
+- Please submit Exercise 10 ASAP!!
 
 - Last day to submit your exercises is December 10th!!
 
-- I will NOT post the answer keys or provide comments until everyone has submits Exercise 11 (lol this was the best threat I could come up with)
+- I will NOT post the answer keys or provide comments until everyone has submitted Exercise 10 (lol this was the best threat I could come up with)
 
 # Evaluations
 
