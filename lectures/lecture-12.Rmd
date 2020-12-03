@@ -110,9 +110,9 @@ You need to send me an email to a GitHub repository URL that contains the follow
 
 # Examples of Websites
 
-- Basic website (Wix): http://www.dillonlaaker.org/
+- Basic website (Weebly): http://www.dillonlaaker.org/
 
-- More involved site (Wix): https://www.eleanorneffpowell.com/
+- More involved site (Weebly): https://www.eleanorneffpowell.com/
 
 - More involved website (Wordpress): http://annameier.net/
 
