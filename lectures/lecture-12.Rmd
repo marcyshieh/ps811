@@ -21,7 +21,7 @@ output: beamer_presentation
 
 # Evaluations
 
-- Please submit instructor evaluations for this course
+- Please submit instructor evaluations for this course (Due: December 10th)
 
 - I only see them if at least 5 people (so all of you) submit evaluations
 
