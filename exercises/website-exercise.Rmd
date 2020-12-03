@@ -1,0 +1,50 @@
+---
+title: 'Website Exercise'
+author: "Marcy Shieh"
+date: "12/3/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Create your own website!
+
+Feel free to use whatever web service you prefer. Some options include Weebly, Wordpress, Squarespace, and GitHub Pages. Note that you do NOT need to buy a domain for this assignment.
+
+Your website should contain the following pages:
+
+- Home
+
+    - Photo
+    - Some info about you
+
+- About
+
+    - Some background about yourself
+    - Feel free to personalize this with photos of family and pets
+    
+- Research
+
+    - Discuss your research interests
+    - Summarize your published and ongoing projects
+    
+- CV
+
+    - Either link to your CV or put it on the page
+    
+- Teaching
+
+    - List your teaching experience
+    - Link to your teaching materials
+    - Provide a teaching statement if you have one
+    
+- Other Pages (optional)
+
+    - Feel free to add a blog
+    - Page containing photos of your fieldwork
+
+# Submit
+
+Email me (mshieh2@wisc.edu) the link to your website!
