@@ -19,6 +19,16 @@ output: beamer_presentation
 
 - I will NOT post the answer keys or provide comments until everyone has submits Exercise 11 (lol this was the best threat I could come up with)
 
+# Evaluations
+
+- Please submit instructor evaluations for this course
+
+- I only see them if at least 5 people (so all of you) submit evaluations
+
+- This helps me with teaching the course going forward
+
+- In non-pandemic times, I would have brought in homebaked goods
+
 # Final Presentation: Overview
 
 - Due: December 10th (in class)
@@ -89,6 +99,7 @@ You need to send me an email to a GitHub repository URL that contains the follow
 
 - Academic Twitter is great for...
 
+    - promoting your own work
     - seeing what your favorite researchers are working on
     - seeing what has recently been published in the top journals
     - upcoming conferences/events in your (sub)subfield
