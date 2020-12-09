@@ -349,7 +349,7 @@ stargazer(table2_ccs_nominees_model, table2_add_nominees, table2_newadditions,
                                "Same Party"),
           column.labels = c("CCS Nominees",
                             "Additional Nominees",
-                            "Include Alito and Sotomayor"),
+                            "Add Alito and Sotomayor"),
           dep.var.caption = "Senate Vote",
           header = FALSE,
           dep.var.labels.include = FALSE,
@@ -360,9 +360,9 @@ stargazer(table2_ccs_nominees_model, table2_add_nominees, table2_newadditions,
 
 Find replication materials for a paper and replicate a table within the paper.
 
-    - There are many political science papers with data stored in the Stata (`.dta`) file  format accompanied by a Stata file (`.do`) file. In those cases, you will need to read the Stata file into R using the `haven` package and recreate your table of choice using R code. In other words, please do not turn in Stata code!
+- There are many political science papers with data stored in the Stata (`.dta`) file  format accompanied by a Stata file (`.do`) file. In those cases, you will need to read the Stata file into R using the `haven` package and recreate your table of choice using R code. In other words, please do not turn in Stata code!
     
-    - If you do find replication materials in R and would like to run the entire R script, please feel free to do so! Reviewing other people's replication materials is the best way to learn how scholars assemble their results.
+- If you do find replication materials in R and would like to run the entire R script, please feel free to do so! Reviewing other people's replication materials is the best way to learn how scholars assemble their results.
 
 Here are some great resources for finding articles with reproducible data.
 
